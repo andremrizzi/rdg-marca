@@ -1,0 +1,1854 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RDG Jeans × DDF Consultoria — Diagnóstico de Marca</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d1f2d;
+    --cream: #f5f0eb;
+    --pink: #e8a0b0;
+    --warm-white: #faf8f5;
+    --muted: #8a8580;
+    --border: #e0dbd4;
+    --accent: #c4a882;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--warm-white);
+    color: var(--navy);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* HEADER */
+  header {
+    background: var(--navy);
+    color: var(--cream);
+    padding: 40px 60px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .header-left .eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--pink);
+    margin-bottom: 10px;
+  }
+
+  .header-left h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 38px;
+    font-weight: 300;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+  }
+
+  .header-left h1 strong {
+    font-weight: 600;
+  }
+
+  .header-right {
+    text-align: right;
+  }
+
+  .header-right .ddf-mark {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .header-right .phase-badge {
+    background: var(--pink);
+    color: var(--navy);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    display: inline-block;
+  }
+
+  /* NAV */
+  nav {
+    background: var(--cream);
+    border-bottom: 1px solid var(--border);
+    padding: 0 60px;
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 16px 20px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+
+  nav a:hover, nav a.active {
+    color: var(--navy);
+    border-bottom-color: var(--pink);
+  }
+
+  /* MAIN LAYOUT */
+  main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 60px;
+  }
+
+  /* SECTION TITLES */
+  .section-label {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 300;
+    color: var(--navy);
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* CARDS GRID */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+
+  .card {
+    background: white;
+    border: 1px solid var(--border);
+    padding: 24px;
+    position: relative;
+  }
+
+  .card .card-label {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+
+  .card .card-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 300;
+    color: var(--navy);
+    line-height: 1;
+  }
+
+  .card .card-sub {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 6px;
+  }
+
+  .card .card-accent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--pink);
+  }
+
+  /* LINKS SECTION */
+  .links-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+
+  .link-card {
+    background: var(--navy);
+    color: var(--cream);
+    padding: 24px 28px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background 0.2s;
+  }
+
+  .link-card:hover { background: #162940; }
+
+  .link-card .lc-left .lc-label {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .link-card .lc-left .lc-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  .link-card .lc-arrow {
+    font-size: 20px;
+    color: var(--pink);
+  }
+
+  /* TABLE */
+  .table-wrap {
+    background: white;
+    border: 1px solid var(--border);
+    overflow-x: auto;
+    margin-bottom: 48px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+
+  thead tr {
+    background: var(--navy);
+    color: var(--cream);
+  }
+
+  thead th {
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  tbody tr {
+    border-bottom: 1px solid var(--border);
+    transition: background 0.15s;
+  }
+
+  tbody tr:hover { background: #faf6f2; }
+
+  tbody td {
+    padding: 11px 16px;
+    color: var(--navy);
+    vertical-align: middle;
+  }
+
+  .rep-name {
+    font-weight: 500;
+  }
+
+  .rep-contact {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  .region-badge {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    padding: 3px 9px;
+    font-size: 11px;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  .tenure-badge {
+    font-size: 11px;
+    padding: 3px 9px;
+    font-weight: 500;
+  }
+
+  .tenure-5plus { background: #e8f4ed; color: #2d6b47; }
+  .tenure-4 { background: #edf2fb; color: #2d4a7a; }
+  .tenure-2 { background: #f5f0ff; color: #5a3e8a; }
+  .tenure-1 { background: #fff8e8; color: #7a5a10; }
+  .tenure-new { background: #fdf0f0; color: #8a2020; }
+
+  /* BAR CHART SECTION */
+  .chart-section {
+    background: white;
+    border: 1px solid var(--border);
+    padding: 32px;
+    margin-bottom: 48px;
+  }
+
+  .chart-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 24px;
+    color: var(--navy);
+  }
+
+  .bar-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    gap: 14px;
+  }
+
+  .bar-label {
+    width: 180px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--navy);
+    text-align: right;
+    flex-shrink: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .bar-track {
+    flex: 1;
+    height: 22px;
+    background: var(--cream);
+    position: relative;
+    overflow: visible;
+  }
+
+  .bar-fill {
+    height: 100%;
+    background: var(--navy);
+    transition: width 1s ease;
+    position: relative;
+  }
+
+  .bar-fill.highlight { background: var(--pink); }
+
+  .bar-val {
+    font-size: 11px;
+    color: var(--muted);
+    width: 120px;
+    flex-shrink: 0;
+    font-weight: 500;
+  }
+
+  /* CHECKLIST */
+  .checklist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+
+  .checklist-group {
+    background: white;
+    border: 1px solid var(--border);
+    padding: 24px;
+  }
+
+  .checklist-group h4 {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+  }
+
+  .check-item:last-child { border-bottom: none; }
+
+  .check-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+    font-weight: 700;
+  }
+
+  .check-yes { background: #2d6b47; color: white; }
+  .check-no { background: var(--border); color: var(--muted); }
+  .check-partial { background: var(--accent); color: white; }
+
+  .check-text { color: var(--navy); line-height: 1.4; }
+
+  /* CRONOGRAMA */
+  .timeline-section {
+    background: white;
+    border: 1px solid var(--border);
+    padding: 32px;
+    margin-bottom: 48px;
+    overflow-x: auto;
+  }
+
+  .timeline-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+  }
+
+  .timeline-table th {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 8px 12px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .timeline-table th:first-child { text-align: left; }
+
+  .timeline-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    font-size: 12px;
+  }
+
+  .timeline-table td:first-child {
+    font-weight: 500;
+    color: var(--navy);
+    width: 240px;
+  }
+
+  .tl-active {
+    background: var(--navy);
+    border-radius: 2px;
+  }
+
+  .tl-cell {
+    text-align: center;
+    padding: 6px 12px;
+  }
+
+  .phase-tag {
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 2px 6px;
+    background: var(--cream);
+    color: var(--muted);
+    border: 1px solid var(--border);
+    margin-bottom: 4px;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--navy);
+    color: var(--cream);
+    padding: 28px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    margin-top: 20px;
+  }
+
+  footer .ft-left {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+  }
+
+  footer .ft-right {
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: 0.05em;
+  }
+
+  /* SECTION SPACING */
+  section { margin-bottom: 56px; }
+  section:last-child { margin-bottom: 0; }
+
+  /* SCROLLBAR */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: var(--cream); }
+  ::-webkit-scrollbar-thumb { background: var(--border); }
+
+  html { scroll-behavior: smooth; }
+  section { scroll-margin-top: 50px; }
+
+  /* ABAS */
+  .tab-nav {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 0;
+    flex-wrap: wrap;
+  }
+
+  .tab-btn {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-bottom: none;
+    padding: 10px 18px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .tab-btn:hover { color: var(--navy); background: white; }
+
+  .pareto-table { width:100%; border-collapse:collapse; font-size:13px; }
+  .pareto-table thead tr { background:var(--navy); color:var(--cream); }
+  .pareto-table thead th { padding:11px 14px; font-size:10px; font-weight:500; letter-spacing:.15em; text-transform:uppercase; white-space:nowrap; }
+  .pareto-table tbody tr { border-bottom:1px solid var(--border); }
+  .pareto-table tbody tr:hover td { background:#faf6f2; }
+  .pareto-table tbody td { padding:9px 14px; }
+
+  .tab-btn.active {
+    background: white;
+    color: var(--navy);
+    border-color: var(--border);
+    border-bottom: 2px solid white;
+    margin-bottom: -1px;
+    z-index: 1;
+    position: relative;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-left">
+    <div class="eyebrow">Projeto Estratégia de Marca</div>
+    <h1>RDG Jeans<br><strong>Diagnóstico Comercial</strong></h1>
+  </div>
+  <div class="header-right">
+    <span class="ddf-mark">DDF Consultoria · Daniela Dalmolin Feldens</span>
+    <span class="phase-badge">Fase 1 — Em andamento</span>
+  </div>
+</header>
+
+<nav>
+  <a href="#acesso" class="active">Acesso</a>
+  <a href="#visao-geral">Visão Geral</a>
+  <a href="#representantes">Representantes</a>
+  <a href="#historico">Histórico de Vendas</a>
+  <a href="#por-colecao">Por Coleção</a>
+  <a href="#por-regiao">Por Região</a>
+  <a href="#por-tipo">Por Tipo & Modelagem</a>
+  <a href="#pareto">Top 20 Referências</a>
+  <a href="#checklist">Dados Solicitados</a>
+</nav>
+
+<main>
+
+  <!-- ACESSO RÁPIDO -->
+  <section id="acesso">
+    <div class="section-label">Acesso rápido</div>
+    <div class="section-title">Documentos e Ferramentas do Projeto</div>
+    <div class="links-row">
+      <a class="link-card" href="https://drive.google.com/drive/folders/1FWnPTlOCTFmuzHEoosSzwf5hNbveNDg3?usp=sharing" target="_blank">
+        <div class="lc-left">
+          <span class="lc-label">Google Drive</span>
+          <span class="lc-title">Pasta Geral do Projeto</span>
+        </div>
+        <span class="lc-arrow">↗</span>
+      </a>
+      <a class="link-card" href="https://www.consultoriaddf.com.br" target="_blank">
+        <div class="lc-left">
+          <span class="lc-label">Consultora</span>
+          <span class="lc-title">DDF Consultoria · Daniela Feldens</span>
+        </div>
+        <span class="lc-arrow">↗</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- VISÃO GERAL -->
+  <section id="visao-geral">
+    <div class="section-label">Panorama comercial</div>
+    <div class="section-title">Visão Geral — Histórico de Vendas</div>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-accent"></div>
+        <div class="card-label">Inv. 2024</div>
+        <div class="card-value">65.265</div>
+        <div class="card-sub">peças · 22 representantes</div>
+      </div>
+      <div class="card">
+        <div class="card-accent"></div>
+        <div class="card-label">Verão 2025</div>
+        <div class="card-value">122.829</div>
+        <div class="card-sub">peças · 23 representantes</div>
+      </div>
+      <div class="card">
+        <div class="card-accent"></div>
+        <div class="card-label">Inv. 2025</div>
+        <div class="card-value">82.046</div>
+        <div class="card-sub">peças · 20 representantes</div>
+      </div>
+      <div class="card">
+        <div class="card-accent"></div>
+        <div class="card-label">Verão 2026</div>
+        <div class="card-value">122.339</div>
+        <div class="card-sub">peças · 21 representantes</div>
+      </div>
+      <div class="card">
+        <div class="card-accent"></div>
+        <div class="card-label">Inv. 2026</div>
+        <div class="card-value">101.812</div>
+        <div class="card-sub">peças · 21 representantes</div>
+      </div>
+      <div class="card">
+        <div class="card-accent" style="background:var(--accent)"></div>
+        <div class="card-label">Verão 2027 <span style="color:var(--pink);font-size:9px;letter-spacing:.1em">EM ANDAMENTO</span></div>
+        <div class="card-value">40.171</div>
+        <div class="card-sub">peças · 23 representantes</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HISTÓRICO BAR CHART -->
+  <section id="historico">
+    <div class="section-label">Performance por representante</div>
+    <div class="section-title">Ranking Histórico — Total Acumulado (Inv. 2024 a Inv. 2026)</div>
+
+    <div class="chart-section">
+      <div class="chart-title">Quantidade de peças acumulada — Inv. 2024 a Inv. 2026 (ativos e inativos)</div>
+
+      <div class="bar-row" style="">
+        <div class="bar-label">Emanuel Balzan</div>
+        <div class="bar-track"><div class="bar-fill highlight" style="width:100%;background:var(--pink)"></div></div>
+        <div class="bar-val">70,718 pç (RS)</div>
+      </div>
+      <div class="bar-row" style="">
+        <div class="bar-label">SVF (Silvio/Vanessa)</div>
+        <div class="bar-track"><div class="bar-fill" style="width:81%;background:var(--navy)"></div></div>
+        <div class="bar-val">57,584 pç (SC)</div>
+      </div>
+      <div class="bar-row" style="">
+        <div class="bar-label">Marcio Schons</div>
+        <div class="bar-track"><div class="bar-fill" style="width:69%;background:var(--navy)"></div></div>
+        <div class="bar-val">48,897 pç (RS)</div>
+      </div>
+      <div class="bar-row" style="">
+        <div class="bar-label">Rafael Novak</div>
+        <div class="bar-track"><div class="bar-fill" style="width:64%;background:var(--navy)"></div></div>
+        <div class="bar-val">45,448 pç (PR)</div>
+      </div>
+      <div class="bar-row" style="">
+        <div class="bar-label">Laudemiro Jr.</div>
+        <div class="bar-track"><div class="bar-fill" style="width:63%;background:var(--navy)"></div></div>
+        <div class="bar-val">44,675 pç (PA)</div>
+      </div>
+      <div class="bar-row" style="">
+        <div class="bar-label">Jose Danilo Cruz</div>
+        <div class="bar-track"><div class="bar-fill" style="width:43%;background:var(--navy)"></div></div>
+        <div class="bar-val">30,236 pç (MG)</div>
+      </div>
+      <div class="bar-row" style="">
+        <div class="bar-label">G &amp; G (Giliarde)</div>
+        <div class="bar-track"><div class="bar-fill" style="width:36%;background:var(--navy)"></div></div>
+        <div class="bar-val">25,557 pç (MA/PI)</div>
+      </div>
+      <div class="bar-row" style="">
+        <div class="bar-label">M.C. Ferreira Filho</div>
+        <div class="bar-track"><div class="bar-fill" style="width:36%;background:var(--navy)"></div></div>
+        <div class="bar-val">25,088 pç (RO/AC)</div>
+      </div>
+      <div class="bar-row" style="">
+        <div class="bar-label">José Pedro Giacomini</div>
+        <div class="bar-track"><div class="bar-fill" style="width:29%;background:var(--navy)"></div></div>
+        <div class="bar-val">20,567 pç (SC)</div>
+      </div>
+      <div class="bar-row" style="">
+        <div class="bar-label">Geovane Machado</div>
+        <div class="bar-track"><div class="bar-fill" style="width:21%;background:var(--navy)"></div></div>
+        <div class="bar-val">14,692 pç (CE/PI)</div>
+      </div>
+      <div class="bar-row" style="opacity:.5;">
+        <div class="bar-label">Prospectar <span style="font-size:9px;color:var(--muted)">inativo</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:13%;background:var(--border)"></div></div>
+        <div class="bar-val">9,449 pç (MT)</div>
+      </div>
+      <div class="bar-row" style="">
+        <div class="bar-label">Luiz Apolinario</div>
+        <div class="bar-track"><div class="bar-fill" style="width:13%;background:var(--navy)"></div></div>
+        <div class="bar-val">8,962 pç (SC-Joinville)</div>
+      </div>
+      <div class="bar-row" style="opacity:.5;">
+        <div class="bar-label">Zorailson Moura <span style="font-size:9px;color:var(--muted)">inativo</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:12%;background:var(--border)"></div></div>
+        <div class="bar-val">8,331 pç (BA)</div>
+      </div>
+      <div class="bar-row" style="">
+        <div class="bar-label">Multivisão (Leandro)</div>
+        <div class="bar-track"><div class="bar-fill" style="width:11%;background:var(--navy)"></div></div>
+        <div class="bar-val">7,532 pç (MT)</div>
+      </div>
+      <div class="bar-row" style="opacity:.5;">
+        <div class="bar-label">Jose Carlos P. Oliveira <span style="font-size:9px;color:var(--muted)">inativo</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:10%;background:var(--border)"></div></div>
+        <div class="bar-val">6,715 pç (BA)</div>
+      </div>
+      <div class="bar-row" style="">
+        <div class="bar-label">W.J. Oliveira (Wells)</div>
+        <div class="bar-track"><div class="bar-fill" style="width:7%;background:var(--navy)"></div></div>
+        <div class="bar-val">4,822 pç (ES)</div>
+      </div>
+      <div class="bar-row" style="opacity:.5;">
+        <div class="bar-label">Z. Silveira <span style="font-size:9px;color:var(--muted)">inativo</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:6%;background:var(--border)"></div></div>
+        <div class="bar-val">4,577 pç (ES)</div>
+      </div>
+      <div class="bar-row" style="">
+        <div class="bar-label">Di-Piebren (Isaias/Gizele)</div>
+        <div class="bar-track"><div class="bar-fill" style="width:6%;background:var(--navy)"></div></div>
+        <div class="bar-val">4,390 pç (PE)</div>
+      </div>
+      <div class="bar-row" style="">
+        <div class="bar-label">R. Perruti (Romildo)</div>
+        <div class="bar-track"><div class="bar-fill" style="width:6%;background:var(--navy)"></div></div>
+        <div class="bar-val">4,121 pç (MG)</div>
+      </div>
+      <div class="bar-row" style="opacity:.5;">
+        <div class="bar-label">Nordeste do Brasil <span style="font-size:9px;color:var(--muted)">inativo</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:6%;background:var(--border)"></div></div>
+        <div class="bar-val">4,055 pç (NE)</div>
+      </div>
+      <div class="bar-row" style="opacity:.5;">
+        <div class="bar-label">Tiago Cavoly <span style="font-size:9px;color:var(--muted)">inativo</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:6%;background:var(--border)"></div></div>
+        <div class="bar-val">3,915 pç (MG)</div>
+      </div>
+      <div class="bar-row" style="opacity:.5;">
+        <div class="bar-label">Anderson Alves <span style="font-size:9px;color:var(--muted)">inativo</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:5%;background:var(--border)"></div></div>
+        <div class="bar-val">3,631 pç (PE)</div>
+      </div>
+      <div class="bar-row" style="opacity:.5;">
+        <div class="bar-label">HP Martins <span style="font-size:9px;color:var(--muted)">inativo</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:4%;background:var(--border)"></div></div>
+        <div class="bar-val">3,202 pç (MG)</div>
+      </div>
+      <div class="bar-row" style="">
+        <div class="bar-label">Marcos Candido</div>
+        <div class="bar-track"><div class="bar-fill" style="width:4%;background:var(--navy)"></div></div>
+        <div class="bar-val">3,059 pç (PB/RN)</div>
+      </div>
+      <div class="bar-row" style="opacity:.5;">
+        <div class="bar-label">Maicon Rodrigues <span style="font-size:9px;color:var(--muted)">inativo</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:4%;background:var(--border)"></div></div>
+        <div class="bar-val">2,916 pç (PR)</div>
+      </div>
+      <div class="bar-row" style="">
+        <div class="bar-label">Da Vitoria (Luciano)</div>
+        <div class="bar-track"><div class="bar-fill" style="width:3%;background:var(--navy)"></div></div>
+        <div class="bar-val">2,311 pç (PR)</div>
+      </div>
+      <div class="bar-row" style="opacity:.5;">
+        <div class="bar-label">AV Representações <span style="font-size:9px;color:var(--muted)">inativo</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:3%;background:var(--border)"></div></div>
+        <div class="bar-val">2,177 pç (AL)</div>
+      </div>
+      <div class="bar-row" style="opacity:.5;">
+        <div class="bar-label">San Vicente <span style="font-size:9px;color:var(--muted)">inativo</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:2%;background:var(--border)"></div></div>
+        <div class="bar-val">1,425 pç (DF)</div>
+      </div>
+      <div class="bar-row" style="opacity:.5;">
+        <div class="bar-label">Ricardo Dilson <span style="font-size:9px;color:var(--muted)">inativo</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:2%;background:var(--border)"></div></div>
+        <div class="bar-val">1,270 pç (BA)</div>
+      </div>
+      <div class="bar-row" style="opacity:.5;">
+        <div class="bar-label">Célia Madeira <span style="font-size:9px;color:var(--muted)">inativo</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:1%;background:var(--border)"></div></div>
+        <div class="bar-val">1,006 pç (SP)</div>
+      </div>
+      <div class="bar-row" style="">
+        <div class="bar-label">AR Representações (Allan)</div>
+        <div class="bar-track"><div class="bar-fill" style="width:1%;background:var(--navy)"></div></div>
+        <div class="bar-val">870 pç (PA/AP)</div>
+      </div>
+      <div class="bar-row" style="opacity:.5;">
+        <div class="bar-label">Fabio Silva <span style="font-size:9px;color:var(--muted)">inativo</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:1%;background:var(--border)"></div></div>
+        <div class="bar-val">741 pç (PE)</div>
+      </div>
+      <div class="bar-row" style="">
+        <div class="bar-label">MS Gestão de Moda</div>
+        <div class="bar-track"><div class="bar-fill" style="width:1%;background:var(--navy)"></div></div>
+        <div class="bar-val">706 pç (BA)</div>
+      </div>
+      <div class="bar-row" style="">
+        <div class="bar-label">Wemerson Veiga</div>
+        <div class="bar-track"><div class="bar-fill" style="width:1%;background:var(--navy)"></div></div>
+        <div class="bar-val">560 pç (SE/AL)</div>
+      </div>
+      <div class="bar-row" style="opacity:.5;">
+        <div class="bar-label">Babilônia <span style="font-size:9px;color:var(--muted)">inativo</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:0%;background:var(--border)"></div></div>
+        <div class="bar-val">338 pç (MG)</div>
+      </div>
+      <div class="bar-row" style="opacity:.5;">
+        <div class="bar-label">New Rep <span style="font-size:9px;color:var(--muted)">inativo</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:0%;background:var(--border)"></div></div>
+        <div class="bar-val">306 pç (PB)</div>
+      </div>
+      <div class="bar-row" style="">
+        <div class="bar-label">BFC (Bruno Fernandes)</div>
+        <div class="bar-track"><div class="bar-fill" style="width:0%;background:var(--navy)"></div></div>
+        <div class="bar-val">293 pç (GO/DF/TO)</div>
+      </div>
+      <div class="bar-row" style="opacity:.5;">
+        <div class="bar-label">Costa &amp; Bueno <span style="font-size:9px;color:var(--muted)">inativo</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:0%;background:var(--border)"></div></div>
+        <div class="bar-val">110 pç (MG)</div>
+      </div>
+
+      <p style="font-size:11px;color:var(--muted);margin-top:20px;border-top:1px solid var(--border);padding-top:14px;">
+        Representantes esmaecidos = inativos. Barras calculadas proporcionalmente ao maior volume (Emanuel Balzan = 70.718 pç).
+      </p>
+    </div>
+  </section>
+
+  <!-- REPRESENTANTES -->
+  <section id="representantes">
+    <div class="section-label">Rede comercial ativa</div>
+    <div class="section-title">Representantes Ativos — Mapa da Rede</div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Cód.</th>
+            <th>Representante / Contato</th>
+            <th>Região</th>
+            <th>Contato</th>
+            <th>E-mail</th>
+            <th>Tempo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>00032</td>
+            <td><div class="rep-name">Emanuel Balzan Silveira</div><div class="rep-contact">Emanuel e Conrado</div></td>
+            <td><span class="region-badge">Rio Grande do Sul</span></td>
+            <td>51 99342-5222</td>
+            <td>emanuel.balzan.silveira@gmail.com</td>
+            <td><span class="tenure-badge tenure-5plus">+5 anos</span></td>
+          </tr>
+          <tr>
+            <td>00045</td>
+            <td><div class="rep-name">SVF Representações Ltda</div><div class="rep-contact">Silvio e Vanessa</div></td>
+            <td><span class="region-badge">Santa Catarina</span></td>
+            <td>47 99988-3232</td>
+            <td>silviothesnake@hotmail.com</td>
+            <td><span class="tenure-badge tenure-5plus">+5 anos</span></td>
+          </tr>
+          <tr>
+            <td>00018</td>
+            <td><div class="rep-name">Rafael Novak</div><div class="rep-contact">Rafael</div></td>
+            <td><span class="region-badge">Paraná</span></td>
+            <td>41 99900-3098</td>
+            <td>r9krepresentacoescontato@gmail.com</td>
+            <td><span class="tenure-badge tenure-5plus">+5 anos</span></td>
+          </tr>
+          <tr>
+            <td>00037</td>
+            <td><div class="rep-name">Marcio Luis Schons</div><div class="rep-contact">Marcio</div></td>
+            <td><span class="region-badge">Rio Grande do Sul</span></td>
+            <td>55 99162-9119</td>
+            <td>marcioschons@gmail.com</td>
+            <td><span class="tenure-badge tenure-5plus">+5 anos</span></td>
+          </tr>
+          <tr>
+            <td>00020</td>
+            <td><div class="rep-name">Laudemiro A. Moura Junior</div><div class="rep-contact">Lauro (Laudemiro)</div></td>
+            <td><span class="region-badge">Pará</span></td>
+            <td>86 99823-9904</td>
+            <td>laurojunior.rep@hotmail.com</td>
+            <td><span class="tenure-badge tenure-5plus">+5 anos</span></td>
+          </tr>
+          <tr>
+            <td>06672</td>
+            <td><div class="rep-name">Jose Danilo S. Cruz</div><div class="rep-contact">Danilo</div></td>
+            <td><span class="region-badge">Minas Gerais</span></td>
+            <td>33 98890-8725</td>
+            <td>danilocruzrepresentacoes@gmail.com</td>
+            <td><span class="tenure-badge tenure-4">4 anos</span></td>
+          </tr>
+          <tr>
+            <td>00052</td>
+            <td><div class="rep-name">M.C. Ferreira Filho</div><div class="rep-contact">Mano (Manassés)</div></td>
+            <td><span class="region-badge">Rondônia / Acre</span></td>
+            <td>69 98156-8106</td>
+            <td>tracoerisco2010@hotmail.com</td>
+            <td><span class="tenure-badge tenure-5plus">+5 anos</span></td>
+          </tr>
+          <tr>
+            <td>06008</td>
+            <td><div class="rep-name">G & G Representação</div><div class="rep-contact">Giliarde</div></td>
+            <td><span class="region-badge">Maranhão / Piauí</span></td>
+            <td>86 99961-0660</td>
+            <td>giliardem.sousa@outlook.com</td>
+            <td><span class="tenure-badge tenure-5plus">+5 anos</span></td>
+          </tr>
+          <tr>
+            <td>06693</td>
+            <td><div class="rep-name">Jose Pedro Giacomini Rep.</div><div class="rep-contact">José Pedro</div></td>
+            <td><span class="region-badge">Santa Catarina</span></td>
+            <td>47 99180-6296</td>
+            <td>pedro_jpcomercial@hotmail.com</td>
+            <td><span class="tenure-badge tenure-2">2 anos</span></td>
+          </tr>
+          <tr>
+            <td>07606</td>
+            <td><div class="rep-name">W.J. de Oliveira Representações</div><div class="rep-contact">Wells</div></td>
+            <td><span class="region-badge">Espírito Santo</span></td>
+            <td>27 99994-5152</td>
+            <td>wells_sk8@hotmail.com</td>
+            <td><span class="tenure-badge tenure-new">&lt;1 ano</span></td>
+          </tr>
+          <tr>
+            <td>07608</td>
+            <td><div class="rep-name">R. Perruti Representações Ltda</div><div class="rep-contact">Romildo</div></td>
+            <td><span class="region-badge">Minas Gerais</span></td>
+            <td>35 99195-4919</td>
+            <td>romildo.21.perruti@outlook.com</td>
+            <td><span class="tenure-badge tenure-new">&lt;1 ano</span></td>
+          </tr>
+          <tr>
+            <td>07332</td>
+            <td><div class="rep-name">Di-Piebren Ltda</div><div class="rep-contact">Isaias e Gizele</div></td>
+            <td><span class="region-badge">Pernambuco</span></td>
+            <td>81 98774-0459</td>
+            <td>PEDIDOSISAIAS@GMAIL.COM</td>
+            <td><span class="tenure-badge tenure-1">1 ano</span></td>
+          </tr>
+          <tr>
+            <td>00035</td>
+            <td><div class="rep-name">Geovane Machado Sousa</div><div class="rep-contact">Geovane</div></td>
+            <td><span class="region-badge">Ceará</span></td>
+            <td>86 99978-0142</td>
+            <td>geovanerep@hotmail.com</td>
+            <td><span class="tenure-badge tenure-5plus">+5 anos</span></td>
+          </tr>
+          <tr>
+            <td>07520</td>
+            <td><div class="rep-name">Da Vitoria Representações Ltda</div><div class="rep-contact">Luciano</div></td>
+            <td><span class="region-badge">Paraná</span></td>
+            <td>45 99154-7252</td>
+            <td>davitoriarepresentacoes@gmail.com</td>
+            <td><span class="tenure-badge tenure-new">&lt;1 ano</span></td>
+          </tr>
+          <tr>
+            <td>07320</td>
+            <td><div class="rep-name">Antonio Marcos Candido da Silva</div><div class="rep-contact">Marcos Candido</div></td>
+            <td><span class="region-badge">Paraíba / RN</span></td>
+            <td>83 98736-6492</td>
+            <td>marcospsi93@gmail.com</td>
+            <td><span class="tenure-badge tenure-1">1 ano</span></td>
+          </tr>
+          <tr>
+            <td>00040</td>
+            <td><div class="rep-name">Luiz V. Apolinario</div><div class="rep-contact">Luiz</div></td>
+            <td><span class="region-badge">SC — Joinville</span></td>
+            <td>47 99166-5498</td>
+            <td>Luiz.vendas.apolinario@gmail.com</td>
+            <td><span class="tenure-badge tenure-5plus">+5 anos</span></td>
+          </tr>
+          <tr>
+            <td>07607</td>
+            <td><div class="rep-name">Multivisão Marketing e Consultoria</div><div class="rep-contact">Leandro</div></td>
+            <td><span class="region-badge">Mato Grosso</span></td>
+            <td>66 99918-2723</td>
+            <td>mtvgestaodemarcas@outlook.com</td>
+            <td><span class="tenure-badge tenure-new">&lt;1 ano</span></td>
+          </tr>
+          <tr>
+            <td>07741</td>
+            <td><div class="rep-name">W. de PSS Veiga Representações</div><div class="rep-contact">Wemerson</div></td>
+            <td><span class="region-badge">Sergipe / Alagoas</span></td>
+            <td>82 99155-4490</td>
+            <td>wemersonpessoa@hotmail.com</td>
+            <td><span class="tenure-badge tenure-new">&lt;1 ano</span></td>
+          </tr>
+          <tr>
+            <td>07889</td>
+            <td><div class="rep-name">JL Gestão de Marcas Ltda</div><div class="rep-contact">Juscelino</div></td>
+            <td><span class="region-badge">Bahia</span></td>
+            <td>71 99995-7911</td>
+            <td>santosrepres.representacao@hotmail.com</td>
+            <td><span class="tenure-badge tenure-new">&lt;1 ano</span></td>
+          </tr>
+          <tr>
+            <td>07890</td>
+            <td><div class="rep-name">MS Gestão de Moda Ltda</div><div class="rep-contact">Madson e Jau</div></td>
+            <td><span class="region-badge">Bahia</span></td>
+            <td>71 99126-2669</td>
+            <td>madsonsantos_89@hotmail.com</td>
+            <td><span class="tenure-badge tenure-new">&lt;1 ano</span></td>
+          </tr>
+          <tr>
+            <td>07891</td>
+            <td><div class="rep-name">AR Representações Comerciais Ltda</div><div class="rep-contact">Allan</div></td>
+            <td><span class="region-badge">Pará / Amapá</span></td>
+            <td>91 99196-5237</td>
+            <td>ar.representacoes2025@gmail.com</td>
+            <td><span class="tenure-badge tenure-new">&lt;1 ano</span></td>
+          </tr>
+          <tr>
+            <td>07892</td>
+            <td><div class="rep-name">BFC Representações</div><div class="rep-contact">Bruno Fernandes</div></td>
+            <td><span class="region-badge">GO / DF / TO</span></td>
+            <td>64 98134-4188</td>
+            <td>brunofc4@gmail.com</td>
+            <td><span class="tenure-badge tenure-new">&lt;1 ano</span></td>
+          </tr>
+          <tr>
+            <td>07894</td>
+            <td><div class="rep-name">Dourado & Lima SJRP Representações</div><div class="rep-contact">Bruno Vinicius</div></td>
+            <td><span class="region-badge">São Paulo</span></td>
+            <td>17 99763-1365</td>
+            <td>adm.showroomsp@gmail.com</td>
+            <td><span class="tenure-badge tenure-new">&lt;1 ano</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- VENDA POR COLEÇÃO -->
+  <section id="por-colecao">
+    <div class="section-label">Detalhamento</div>
+    <div class="section-title">Venda por Coleção — Representante a Representante</div>
+
+    <div class="tab-nav">
+      <button class="tab-btn active" onclick="showTab('inv2024')">Inv. 2024</button>
+      <button class="tab-btn" onclick="showTab('ver2025')">Verão 2025</button>
+      <button class="tab-btn" onclick="showTab('inv2025')">Inv. 2025</button>
+      <button class="tab-btn" onclick="showTab('ver2026')">Verão 2026</button>
+      <button class="tab-btn" onclick="showTab('inv2026')">Inv. 2026</button>
+      <button class="tab-btn" onclick="showTab('ver2027')">Verão 2027 <span style="font-size:9px;opacity:.7">parcial</span></button>
+    </div>
+
+    <div class="table-wrap">
+
+      <!-- INV 2024 -->
+      <table id="tab-inv2024" class="tab-table">
+        <thead><tr><th>#</th><th>Representante</th><th>Região</th><th style="text-align:right">Qtd. Peças</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>SVF (Silvio/Vanessa)</td><td>SC</td><td style="text-align:right">9,559</td></tr>
+          <tr><td>2</td><td>Emanuel Balzan</td><td>RS</td><td style="text-align:right">9,211</td></tr>
+          <tr><td>3</td><td>Rafael Novak</td><td>PR</td><td style="text-align:right">6,435</td></tr>
+          <tr><td>4</td><td>Marcio Schons</td><td>RS</td><td style="text-align:right">6,348</td></tr>
+          <tr><td>5</td><td>Laudemiro Jr.</td><td>PA</td><td style="text-align:right">4,907</td></tr>
+          <tr style="opacity:.5"><td>6</td><td>Tiago Cavoly <span style="font-size:9px;color:var(--muted)">inativo</span></td><td>MG</td><td style="text-align:right">3,915</td></tr>
+          <tr><td>7</td><td>G &amp; G (Giliarde)</td><td>MA/PI</td><td style="text-align:right">3,610</td></tr>
+          <tr><td>8</td><td>Geovane Machado</td><td>CE/PI</td><td style="text-align:right">2,905</td></tr>
+          <tr><td>9</td><td>M.C. Ferreira Filho</td><td>RO/AC</td><td style="text-align:right">2,258</td></tr>
+          <tr><td>10</td><td>Luiz Apolinario</td><td>SC-Joinville</td><td style="text-align:right">1,632</td></tr>
+          <tr style="opacity:.5"><td>11</td><td>Prospectar <span style="font-size:9px;color:var(--muted)">inativo</span></td><td>MT</td><td style="text-align:right">1,397</td></tr>
+          <tr style="opacity:.5"><td>12</td><td>Ricardo Dilson <span style="font-size:9px;color:var(--muted)">inativo</span></td><td>BA</td><td style="text-align:right">1,270</td></tr>
+          <tr style="opacity:.5"><td>13</td><td>Nordeste do Brasil <span style="font-size:9px;color:var(--muted)">inativo</span></td><td>NE</td><td style="text-align:right">1,062</td></tr>
+          <tr><td>14</td><td>Jose Danilo Cruz</td><td>MG</td><td style="text-align:right">878</td></tr>
+          <tr style="opacity:.5"><td>15</td><td>Maicon Rodrigues <span style="font-size:9px;color:var(--muted)">inativo</span></td><td>PR</td><td style="text-align:right">695</td></tr>
+          <tr style="opacity:.5"><td>16</td><td>AV Representações <span style="font-size:9px;color:var(--muted)">inativo</span></td><td>AL</td><td style="text-align:right">578</td></tr>
+          <tr style="opacity:.5"><td>17</td><td>San Vicente <span style="font-size:9px;color:var(--muted)">inativo</span></td><td>DF</td><td style="text-align:right">432</td></tr>
+          <tr style="opacity:.5"><td>18</td><td>Célia Madeira <span style="font-size:9px;color:var(--muted)">inativo</span></td><td>SP</td><td style="text-align:right">416</td></tr>
+          <tr style="opacity:.5"><td>19</td><td>New Rep <span style="font-size:9px;color:var(--muted)">inativo</span></td><td>PB</td><td style="text-align:right">306</td></tr>
+          <tr style="opacity:.5"><td>20</td><td>Anderson Alves <span style="font-size:9px;color:var(--muted)">inativo</span></td><td>PE</td><td style="text-align:right">175</td></tr>
+          <tr><td>21</td><td>José Pedro Giacomini</td><td>SC</td><td style="text-align:right">14</td></tr>
+          <tr style="font-weight:600;background:var(--cream)"><td></td><td colspan="2">Total</td><td style="text-align:right">58,003</td></tr>
+        </tbody>
+      </table>
+
+      <!-- VER 2025 -->
+      <table id="tab-ver2025" class="tab-table" style="display:none">
+        <thead><tr><th>#</th><th>Representante</th><th>Região</th><th style="text-align:right">Qtd. Peças</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Emanuel Balzan</td><td>RS</td><td style="text-align:right">15,661</td></tr>
+          <tr><td>2</td><td>Laudemiro Jr.</td><td>PA</td><td style="text-align:right">14,791</td></tr>
+          <tr><td>3</td><td>SVF (Silvio/Vanessa)</td><td>SC</td><td style="text-align:right">12,605</td></tr>
+          <tr><td>4</td><td>Marcio Schons</td><td>RS</td><td style="text-align:right">12,193</td></tr>
+          <tr><td>5</td><td>Rafael Novak</td><td>PR</td><td style="text-align:right">11,485</td></tr>
+          <tr><td>6</td><td>G &amp; G (Giliarde)</td><td>MA/PI</td><td style="text-align:right">8,581</td></tr>
+          <tr><td>7</td><td>Jose Danilo Cruz</td><td>MG</td><td style="text-align:right">7,506</td></tr>
+          <tr><td>8</td><td>M.C. Ferreira Filho</td><td>RO/AC</td><td style="text-align:right">5,043</td></tr>
+          <tr><td>9</td><td>José Pedro Giacomini</td><td>SC</td><td style="text-align:right">4,767</td></tr>
+          <tr><td>10</td><td>Geovane Machado</td><td>CE/PI</td><td style="text-align:right">4,103</td></tr>
+          <tr style="opacity:.5"><td>11</td><td>Prospectar <span style="font-size:9px;color:var(--muted)">inativo</span></td><td>MT</td><td style="text-align:right">3,852</td></tr>
+          <tr><td>12</td><td>Luiz Apolinario</td><td>SC-Joinville</td><td style="text-align:right">2,392</td></tr>
+          <tr style="opacity:.5"><td>13</td><td>Zorailson Moura <span style="font-size:9px;color:var(--muted)">inativo</span></td><td>BA</td><td style="text-align:right">2,144</td></tr>
+          <tr style="opacity:.5"><td>14</td><td>Anderson Alves <span style="font-size:9px;color:var(--muted)">inativo</span></td><td>PE</td><td style="text-align:right">1,961</td></tr>
+          <tr style="opacity:.5"><td>15</td><td>Maicon Rodrigues <span style="font-size:9px;color:var(--muted)">inativo</span></td><td>PR</td><td style="text-align:right">1,359</td></tr>
+          <tr style="opacity:.5"><td>16</td><td>AV Representações <span style="font-size:9px;color:var(--muted)">inativo</span></td><td>AL</td><td style="text-align:right">1,256</td></tr>
+          <tr style="opacity:.5"><td>17</td><td>San Vicente <span style="font-size:9px;color:var(--muted)">inativo</span></td><td>DF</td><td style="text-align:right">859</td></tr>
+          <tr style="opacity:.5"><td>18</td><td>Célia Madeira <span style="font-size:9px;color:var(--muted)">inativo</span></td><td>SP</td><td style="text-align:right">590</td></tr>
+          <tr><td>19</td><td>MS Gestão de Moda</td><td>BA</td><td style="text-align:right">706</td></tr>
+          <tr><td>20</td><td>AR Representações (Allan)</td><td>PA/AP</td><td style="text-align:right">870</td></tr>
+          <tr><td>21</td><td>BFC (Bruno Fernandes)</td><td>GO/DF/TO</td><td style="text-align:right">293</td></tr>
+          <tr style="font-weight:600;background:var(--cream)"><td></td><td colspan="2">Total</td><td style="text-align:right">113,017</td></tr>
+        </tbody>
+      </table>
+
+      <!-- INV 2025 -->
+      <table id="tab-inv2025" class="tab-table" style="display:none">
+        <thead><tr><th>#</th><th>Representante</th><th>Região</th><th style="text-align:right">Qtd. Peças</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Emanuel Balzan</td><td>RS</td><td style="text-align:right">13,177</td></tr>
+          <tr><td>2</td><td>SVF (Silvio/Vanessa)</td><td>SC</td><td style="text-align:right">10,021</td></tr>
+          <tr><td>3</td><td>Marcio Schons</td><td>RS</td><td style="text-align:right">9,147</td></tr>
+          <tr><td>4</td><td>Laudemiro Jr.</td><td>PA</td><td style="text-align:right">7,408</td></tr>
+          <tr><td>5</td><td>Jose Danilo Cruz</td><td>MG</td><td style="text-align:right">7,037</td></tr>
+          <tr><td>6</td><td>Rafael Novak</td><td>PR</td><td style="text-align:right">6,583</td></tr>
+          <tr><td>7</td><td>José Pedro Giacomini</td><td>SC</td><td style="text-align:right">4,821</td></tr>
+          <tr><td>8</td><td>M.C. Ferreira Filho</td><td>RO/AC</td><td style="text-align:right">4,763</td></tr>
+          <tr><td>9</td><td>G &amp; G (Giliarde)</td><td>MA/PI</td><td style="text-align:right">3,046</td></tr>
+          <tr style="opacity:.5"><td>10</td><td>Jose Carlos P. Oliveira <span style="font-size:9px;color:var(--muted)">inativo</span></td><td>BA</td><td style="text-align:right">2,324</td></tr>
+          <tr><td>11</td><td>Geovane Machado</td><td>CE/PI</td><td style="text-align:right">2,257</td></tr>
+          <tr style="opacity:.5"><td>12</td><td>Z. Silveira <span style="font-size:9px;color:var(--muted)">inativo</span></td><td>ES</td><td style="text-align:right">1,702</td></tr>
+          <tr style="opacity:.5"><td>13</td><td>Prospectar <span style="font-size:9px;color:var(--muted)">inativo</span></td><td>MT</td><td style="text-align:right">1,482</td></tr>
+          <tr><td>14</td><td>Luiz Apolinario</td><td>SC-Joinville</td><td style="text-align:right">1,439</td></tr>
+          <tr style="opacity:.5"><td>15</td><td>Anderson Alves <span style="font-size:9px;color:var(--muted)">inativo</span></td><td>PE</td><td style="text-align:right">1,149</td></tr>
+          <tr style="opacity:.5"><td>16</td><td>Zorailson Moura <span style="font-size:9px;color:var(--muted)">inativo</span></td><td>BA</td><td style="text-align:right">1,121</td></tr>
+          <tr style="opacity:.5"><td>17</td><td>Maicon Rodrigues <span style="font-size:9px;color:var(--muted)">inativo</span></td><td>PR</td><td style="text-align:right">862</td></tr>
+          <tr style="opacity:.5"><td>18</td><td>Fabio Silva <span style="font-size:9px;color:var(--muted)">inativo</span></td><td>PE</td><td style="text-align:right">741</td></tr>
+          <tr style="opacity:.5"><td>19</td><td>Nordeste do Brasil <span style="font-size:9px;color:var(--muted)">inativo</span></td><td>NE</td><td style="text-align:right">668</td></tr>
+          <tr style="opacity:.5"><td>20</td><td>AV Representações <span style="font-size:9px;color:var(--muted)">inativo</span></td><td>AL</td><td style="text-align:right">343</td></tr>
+          <tr style="opacity:.5"><td>21</td><td>San Vicente <span style="font-size:9px;color:var(--muted)">inativo</span></td><td>DF</td><td style="text-align:right">134</td></tr>
+          <tr style="font-weight:600;background:var(--cream)"><td></td><td colspan="2">Total</td><td style="text-align:right">80,225</td></tr>
+        </tbody>
+      </table>
+
+      <!-- VER 2026 -->
+      <table id="tab-ver2026" class="tab-table" style="display:none">
+        <thead><tr><th>#</th><th>Representante</th><th>Região</th><th style="text-align:right">Qtd. Peças</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Emanuel Balzan</td><td>RS</td><td style="text-align:right">18,062</td></tr>
+          <tr><td>2</td><td>SVF (Silvio/Vanessa)</td><td>SC</td><td style="text-align:right">14,381</td></tr>
+          <tr><td>3</td><td>Rafael Novak</td><td>PR</td><td style="text-align:right">13,132</td></tr>
+          <tr><td>4</td><td>Marcio Schons</td><td>RS</td><td style="text-align:right">12,151</td></tr>
+          <tr><td>5</td><td>Laudemiro Jr.</td><td>PA</td><td style="text-align:right">11,334</td></tr>
+          <tr><td>6</td><td>Jose Danilo Cruz</td><td>MG</td><td style="text-align:right">8,693</td></tr>
+          <tr><td>7</td><td>M.C. Ferreira Filho</td><td>RO/AC</td><td style="text-align:right">6,853</td></tr>
+          <tr><td>8</td><td>G &amp; G (Giliarde)</td><td>MA/PI</td><td style="text-align:right">6,667</td></tr>
+          <tr><td>9</td><td>José Pedro Giacomini</td><td>SC</td><td style="text-align:right">5,762</td></tr>
+          <tr style="opacity:.5"><td>10</td><td>HP Martins <span style="font-size:9px;color:var(--muted)">inativo</span></td><td>MG</td><td style="text-align:right">3,202</td></tr>
+          <tr><td>11</td><td>Geovane Machado</td><td>CE/PI</td><td style="text-align:right">3,031</td></tr>
+          <tr style="opacity:.5"><td>12</td><td>Z. Silveira <span style="font-size:9px;color:var(--muted)">inativo</span></td><td>ES</td><td style="text-align:right">2,875</td></tr>
+          <tr style="opacity:.5"><td>13</td><td>Prospectar <span style="font-size:9px;color:var(--muted)">inativo</span></td><td>MT</td><td style="text-align:right">2,718</td></tr>
+          <tr style="opacity:.5"><td>14</td><td>Zorailson Moura <span style="font-size:9px;color:var(--muted)">inativo</span></td><td>BA</td><td style="text-align:right">2,630</td></tr>
+          <tr style="opacity:.5"><td>15</td><td>Jose Carlos P. Oliveira <span style="font-size:9px;color:var(--muted)">inativo</span></td><td>BA</td><td style="text-align:right">2,393</td></tr>
+          <tr><td>16</td><td>Luiz Apolinario</td><td>SC-Joinville</td><td style="text-align:right">2,221</td></tr>
+          <tr><td>17</td><td>Di-Piebren (Isaias/Gizele)</td><td>PE</td><td style="text-align:right">1,972</td></tr>
+          <tr><td>18</td><td>Marcos Candido</td><td>PB/RN</td><td style="text-align:right">1,765</td></tr>
+          <tr style="opacity:.5"><td>19</td><td>Nordeste do Brasil <span style="font-size:9px;color:var(--muted)">inativo</span></td><td>NE</td><td style="text-align:right">1,599</td></tr>
+          <tr style="opacity:.5"><td>20</td><td>Anderson Alves <span style="font-size:9px;color:var(--muted)">inativo</span></td><td>PE</td><td style="text-align:right">346</td></tr>
+          <tr style="opacity:.5"><td>21</td><td>Babilônia <span style="font-size:9px;color:var(--muted)">inativo</span></td><td>MG</td><td style="text-align:right">338</td></tr>
+          <tr style="opacity:.5"><td>22</td><td>Costa &amp; Bueno <span style="font-size:9px;color:var(--muted)">inativo</span></td><td>MG</td><td style="text-align:right">110</td></tr>
+          <tr><td>23</td><td>Multivisão (Leandro)</td><td>MT</td><td style="text-align:right">94</td></tr>
+          <tr><td>24</td><td>W.J. Oliveira (Wells)</td><td>ES</td><td style="text-align:right">10</td></tr>
+          <tr style="font-weight:600;background:var(--cream)"><td></td><td colspan="2">Total</td><td style="text-align:right">122,339</td></tr>
+        </tbody>
+      </table>
+
+      <!-- INV 2026 -->
+      <table id="tab-inv2026" class="tab-table" style="display:none">
+        <thead><tr><th>#</th><th>Representante</th><th>Região</th><th style="text-align:right">Qtd. Peças</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Emanuel Balzan</td><td>RS</td><td style="text-align:right">14,607</td></tr>
+          <tr><td>2</td><td>SVF (Silvio/Vanessa)</td><td>SC</td><td style="text-align:right">11,018</td></tr>
+          <tr><td>3</td><td>Marcio Schons</td><td>RS</td><td style="text-align:right">9,058</td></tr>
+          <tr><td>4</td><td>Rafael Novak</td><td>PR</td><td style="text-align:right">7,813</td></tr>
+          <tr><td>5</td><td>Multivisão (Leandro)</td><td>MT</td><td style="text-align:right">7,438</td></tr>
+          <tr><td>6</td><td>Laudemiro Jr.</td><td>PA</td><td style="text-align:right">6,235</td></tr>
+          <tr><td>7</td><td>M.C. Ferreira Filho</td><td>RO/AC</td><td style="text-align:right">6,171</td></tr>
+          <tr><td>8</td><td>Jose Danilo Cruz</td><td>MG</td><td style="text-align:right">6,122</td></tr>
+          <tr><td>9</td><td>José Pedro Giacomini</td><td>SC</td><td style="text-align:right">5,203</td></tr>
+          <tr><td>10</td><td>W.J. Oliveira (Wells)</td><td>ES</td><td style="text-align:right">4,812</td></tr>
+          <tr><td>11</td><td>R. Perruti (Romildo)</td><td>MG</td><td style="text-align:right">4,121</td></tr>
+          <tr><td>12</td><td>G &amp; G (Giliarde)</td><td>MA/PI</td><td style="text-align:right">3,653</td></tr>
+          <tr style="opacity:.5"><td>13</td><td>Zorailson Moura <span style="font-size:9px;color:var(--muted)">inativo</span></td><td>BA</td><td style="text-align:right">2,436</td></tr>
+          <tr><td>14</td><td>Di-Piebren (Isaias/Gizele)</td><td>PE</td><td style="text-align:right">2,418</td></tr>
+          <tr><td>15</td><td>Geovane Machado</td><td>CE/PI</td><td style="text-align:right">2,396</td></tr>
+          <tr><td>16</td><td>Da Vitoria (Luciano)</td><td>PR</td><td style="text-align:right">2,311</td></tr>
+          <tr style="opacity:.5"><td>17</td><td>Jose Carlos P. Oliveira <span style="font-size:9px;color:var(--muted)">inativo</span></td><td>BA</td><td style="text-align:right">1,998</td></tr>
+          <tr><td>18</td><td>Marcos Candido</td><td>PB/RN</td><td style="text-align:right">1,294</td></tr>
+          <tr><td>19</td><td>Luiz Apolinario</td><td>SC-Joinville</td><td style="text-align:right">1,278</td></tr>
+          <tr style="opacity:.5"><td>20</td><td>Nordeste do Brasil <span style="font-size:9px;color:var(--muted)">inativo</span></td><td>NE</td><td style="text-align:right">726</td></tr>
+          <tr><td>21</td><td>Wemerson Veiga</td><td>SE/AL</td><td style="text-align:right">560</td></tr>
+          <tr style="opacity:.5"><td>22</td><td>DL Gestão de Moda <span style="font-size:9px;color:var(--muted)">inativo</span></td><td>SE/AL</td><td style="text-align:right">144</td></tr>
+          <tr style="font-weight:600;background:var(--cream)"><td></td><td colspan="2">Total</td><td style="text-align:right">101,812</td></tr>
+        </tbody>
+      </table>
+
+      <!-- VER 2027 -->
+      <table id="tab-ver2027" class="tab-table" style="display:none">
+        <thead><tr><th>#</th><th>Representante</th><th>Região</th><th style="text-align:right">Qtd. Peças</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Emanuel Balzan</td><td>RS</td><td style="text-align:right">8,405</td></tr>
+          <tr><td>2</td><td>Rafael Novak</td><td>PR</td><td style="text-align:right">6,996</td></tr>
+          <tr><td>3</td><td>M.C. Ferreira Filho</td><td>RO/AC</td><td style="text-align:right">4,093</td></tr>
+          <tr><td>4</td><td>Marcio Schons</td><td>RS</td><td style="text-align:right">4,014</td></tr>
+          <tr><td>5</td><td>Multivisão (Leandro)</td><td>MT</td><td style="text-align:right">2,709</td></tr>
+          <tr><td>6</td><td>José Pedro Giacomini</td><td>SC</td><td style="text-align:right">2,442</td></tr>
+          <tr><td>7</td><td>W.J. Oliveira (Wells)</td><td>ES</td><td style="text-align:right">2,224</td></tr>
+          <tr><td>8</td><td>SVF (Silvio/Vanessa)</td><td>SC</td><td style="text-align:right">1,273</td></tr>
+          <tr><td>9</td><td>R. Perruti (Romildo)</td><td>MG</td><td style="text-align:right">1,154</td></tr>
+          <tr><td>10</td><td>Di-Piebren (Isaias/Gizele)</td><td>PE</td><td style="text-align:right">1,127</td></tr>
+          <tr><td>11</td><td>G &amp; G (Giliarde)</td><td>MA/PI</td><td style="text-align:right">887</td></tr>
+          <tr><td>12</td><td>AR Representações (Allan)</td><td>PA/AP</td><td style="text-align:right">870</td></tr>
+          <tr><td>13</td><td>Jose Danilo Cruz</td><td>MG</td><td style="text-align:right">783</td></tr>
+          <tr><td>14</td><td>MS Gestão de Moda</td><td>BA</td><td style="text-align:right">706</td></tr>
+          <tr><td>15</td><td>Laudemiro Jr.</td><td>PA</td><td style="text-align:right">695</td></tr>
+          <tr><td>16</td><td>Luiz Apolinario</td><td>SC-Joinville</td><td style="text-align:right">607</td></tr>
+          <tr><td>17</td><td>Da Vitoria (Luciano)</td><td>PR</td><td style="text-align:right">571</td></tr>
+          <tr><td>18</td><td>BFC (Bruno Fernandes)</td><td>GO/DF/TO</td><td style="text-align:right">293</td></tr>
+          <tr><td>19</td><td>Wemerson Veiga</td><td>SE/AL</td><td style="text-align:right">237</td></tr>
+          <tr><td>20</td><td>Geovane Machado</td><td>CE/PI</td><td style="text-align:right">85</td></tr>
+          <tr style="font-weight:600;background:var(--cream)"><td></td><td colspan="2">Total</td><td style="text-align:right">40,171</td></tr>
+        </tbody>
+      </table>
+
+    </div>
+  </section>
+
+  <!-- VENDA POR REGIÃO -->
+  <section id="por-regiao">
+    <div class="section-label">Distribuição geográfica</div>
+    <div class="section-title">Venda por Macrorregião — % por Coleção</div>
+
+    <div class="chart-section">
+      <p style="font-size:12px;color:var(--muted);margin-bottom:24px">Sul = RS, SC, PR &nbsp;·&nbsp; Sudeste = MG, ES, SP &nbsp;·&nbsp; Nordeste = MA, PI, CE, PE, PB, RN, BA, SE, AL &nbsp;·&nbsp; Norte = PA, RO, AC, AP &nbsp;·&nbsp; Centro-Oeste = MT, GO, DF, TO</p>
+
+      <style>
+        .regiao-table { width:100%; border-collapse:collapse; font-size:13px; }
+        .regiao-table th { font-size:10px; font-weight:500; letter-spacing:.15em; text-transform:uppercase; color:var(--muted); padding:8px 12px; text-align:center; border-bottom:1px solid var(--border); }
+        .regiao-table th:first-child { text-align:left; }
+        .regiao-table td { padding:10px 12px; border-bottom:1px solid var(--border); text-align:center; font-size:13px; }
+        .regiao-table td:first-child { text-align:left; font-weight:500; }
+        .regiao-table tr:hover td { background:#faf6f2; }
+        .pct-high { color:#2d6b47; font-weight:600; }
+        .pct-med  { color:#2d4a7a; }
+        .pct-low  { color:var(--muted); }
+        .mini-bar { display:inline-block; height:6px; background:var(--navy); vertical-align:middle; margin-left:6px; border-radius:1px; }
+        .mini-bar.pink { background:var(--pink); }
+      </style>
+
+      <table class="regiao-table">
+        <thead>
+          <tr>
+            <th>Macrorregião</th>
+            <th>Inv 2024</th>
+            <th>Ver 2025</th>
+            <th>Inv 2025</th>
+            <th>Ver 2026</th>
+            <th>Inv 2026</th>
+            <th>Ver 2027 ●</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Sul <span style="font-size:11px;color:var(--muted)">(RS, SC, PR)</span></td>
+            <td class="pct-high">58,4% <span class="mini-bar pink" style="width:58px"></span></td>
+            <td class="pct-high">53,5% <span class="mini-bar pink" style="width:53px"></span></td>
+            <td class="pct-high">59,1% <span class="mini-bar pink" style="width:59px"></span></td>
+            <td class="pct-high">53,7% <span class="mini-bar pink" style="width:53px"></span></td>
+            <td class="pct-high">50,4% <span class="mini-bar pink" style="width:50px"></span></td>
+            <td class="pct-high">60,5% <span class="mini-bar pink" style="width:60px"></span></td>
+          </tr>
+          <tr>
+            <td>Norte <span style="font-size:11px;color:var(--muted)">(PA, RO, AC, AP)</span></td>
+            <td class="pct-med">12,4% <span class="mini-bar" style="width:12px"></span></td>
+            <td class="pct-med">18,3% <span class="mini-bar" style="width:18px"></span></td>
+            <td class="pct-med">15,6% <span class="mini-bar" style="width:15px"></span></td>
+            <td class="pct-med">14,9% <span class="mini-bar" style="width:14px"></span></td>
+            <td class="pct-med">12,2% <span class="mini-bar" style="width:12px"></span></td>
+            <td class="pct-med">14,1% <span class="mini-bar" style="width:14px"></span></td>
+          </tr>
+          <tr>
+            <td>Nordeste <span style="font-size:11px;color:var(--muted)">(MA, PI, CE, PE, BA…)</span></td>
+            <td class="pct-med">17,1% <span class="mini-bar" style="width:17px"></span></td>
+            <td class="pct-med">16,6% <span class="mini-bar" style="width:16px"></span></td>
+            <td class="pct-med">12,0% <span class="mini-bar" style="width:12px"></span></td>
+            <td class="pct-med">16,7% <span class="mini-bar" style="width:16px"></span></td>
+            <td class="pct-med">15,2% <span class="mini-bar" style="width:15px"></span></td>
+            <td class="pct-low">7,6% <span class="mini-bar" style="width:7px"></span></td>
+          </tr>
+          <tr>
+            <td>Sudeste <span style="font-size:11px;color:var(--muted)">(MG, ES, SP)</span></td>
+            <td class="pct-low">9,0% <span class="mini-bar" style="width:9px"></span></td>
+            <td class="pct-low">7,2% <span class="mini-bar" style="width:7px"></span></td>
+            <td class="pct-med">11,2% <span class="mini-bar" style="width:11px"></span></td>
+            <td class="pct-med">12,4% <span class="mini-bar" style="width:12px"></span></td>
+            <td class="pct-med">14,8% <span class="mini-bar" style="width:14px"></span></td>
+            <td class="pct-med">10,4% <span class="mini-bar" style="width:10px"></span></td>
+          </tr>
+          <tr>
+            <td>Centro-Oeste <span style="font-size:11px;color:var(--muted)">(MT, GO, DF, TO)</span></td>
+            <td class="pct-low">3,2% <span class="mini-bar" style="width:3px"></span></td>
+            <td class="pct-low">4,4% <span class="mini-bar" style="width:4px"></span></td>
+            <td class="pct-low">2,1% <span class="mini-bar" style="width:2px"></span></td>
+            <td class="pct-low">2,3% <span class="mini-bar" style="width:2px"></span></td>
+            <td class="pct-low">7,3% <span class="mini-bar" style="width:7px"></span></td>
+            <td class="pct-low">7,5% <span class="mini-bar" style="width:7px"></span></td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="font-size:11px;color:var(--muted);margin-top:14px">● Verão 2027 = coleção em andamento, dados parciais &nbsp;·&nbsp; Nordeste Inv 2024 inclui representantes que não estão mais na rede</p>
+    </div>
+  </section>
+
+  <!-- POR TIPO E MODELAGEM -->
+  <section id="por-tipo">
+    <div class="section-label">Mix de produto</div>
+    <div class="section-title">Por Tipo e Modelagem — % por Coleção</div>
+
+    <div class="tab-nav" id="tab-nav-tipo">
+      <button class="tab-btn active" onclick="showTipoTab('tipo-inv2024', this)">Inv 2024</button>
+      <button class="tab-btn" onclick="showTipoTab('tipo-ver2025', this)">Ver 2025</button>
+      <button class="tab-btn" onclick="showTipoTab('tipo-inv2025', this)">Inv 2025</button>
+      <button class="tab-btn" onclick="showTipoTab('tipo-ver2026', this)">Ver 2026</button>
+      <button class="tab-btn" onclick="showTipoTab('tipo-inv2026', this)">Inv 2026</button>
+      <button class="tab-btn" onclick="showTipoTab('tipo-ver2027', this)">Ver 2027 ●</button>
+    </div>
+
+    <div class="chart-section" style="padding-top:28px">
+
+      <!-- INV 2024 -->
+      <div id="tipo-inv2024" class="tipo-panel">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px">
+          <div>
+            <div class="chart-title" style="font-size:15px;margin-bottom:16px">Por Tipo — Inv 2024 (65.265 pç)</div>
+            <div class="bar-row"><div class="bar-label">Feminino</div><div class="bar-track"><div class="bar-fill highlight" style="width:72%"></div></div><div class="bar-val">72,1%</div></div>
+            <div class="bar-row"><div class="bar-label">Masculino</div><div class="bar-track"><div class="bar-fill" style="width:23%"></div></div><div class="bar-val">23,3%</div></div>
+            <div class="bar-row"><div class="bar-label">Plus Size</div><div class="bar-track"><div class="bar-fill" style="width:5%;background:var(--accent)"></div></div><div class="bar-val">4,5%</div></div>
+            <div class="bar-row"><div class="bar-label">Country</div><div class="bar-track"><div class="bar-fill" style="width:1%;background:var(--muted)"></div></div><div class="bar-val">—</div></div>
+          </div>
+          <div>
+            <div class="chart-title" style="font-size:15px;margin-bottom:16px">Por Modelagem — Inv 2024</div>
+            <div class="bar-row"><div class="bar-label">Calça Fem.</div><div class="bar-track"><div class="bar-fill highlight" style="width:100%"></div></div><div class="bar-val">58,2%</div></div>
+            <div class="bar-row"><div class="bar-label">Calça Masc.</div><div class="bar-track"><div class="bar-fill" style="width:30%"></div></div><div class="bar-val">17,3%</div></div>
+            <div class="bar-row"><div class="bar-label">Shorts Fem.</div><div class="bar-track"><div class="bar-fill" style="width:13%"></div></div><div class="bar-val">7,4%</div></div>
+            <div class="bar-row"><div class="bar-label">Bermuda Masc.</div><div class="bar-track"><div class="bar-fill" style="width:9%"></div></div><div class="bar-val">5,2%</div></div>
+            <div class="bar-row"><div class="bar-label">Jaqueta</div><div class="bar-track"><div class="bar-fill" style="width:8%"></div></div><div class="bar-val">4,4%</div></div>
+            <div class="bar-row"><div class="bar-label">Camisa</div><div class="bar-track"><div class="bar-fill" style="width:5%"></div></div><div class="bar-val">3,0%</div></div>
+            <div class="bar-row"><div class="bar-label">Saia</div><div class="bar-track"><div class="bar-fill" style="width:5%"></div></div><div class="bar-val">3,0%</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VER 2025 -->
+      <div id="tipo-ver2025" class="tipo-panel" style="display:none">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px">
+          <div>
+            <div class="chart-title" style="font-size:15px;margin-bottom:16px">Por Tipo — Ver 2025 (122.829 pç)</div>
+            <div class="bar-row"><div class="bar-label">Feminino</div><div class="bar-track"><div class="bar-fill highlight" style="width:68%"></div></div><div class="bar-val">68,3%</div></div>
+            <div class="bar-row"><div class="bar-label">Masculino</div><div class="bar-track"><div class="bar-fill" style="width:27%"></div></div><div class="bar-val">27,2%</div></div>
+            <div class="bar-row"><div class="bar-label">Plus Size</div><div class="bar-track"><div class="bar-fill" style="width:5%;background:var(--accent)"></div></div><div class="bar-val">4,5%</div></div>
+            <div class="bar-row"><div class="bar-label">Country</div><div class="bar-track"><div class="bar-fill" style="width:1%;background:var(--muted)"></div></div><div class="bar-val">—</div></div>
+          </div>
+          <div>
+            <div class="chart-title" style="font-size:15px;margin-bottom:16px">Por Modelagem — Ver 2025</div>
+            <div class="bar-row"><div class="bar-label">Calça Fem.</div><div class="bar-track"><div class="bar-fill highlight" style="width:100%"></div></div><div class="bar-val">39,6%</div></div>
+            <div class="bar-row"><div class="bar-label">Shorts Fem.</div><div class="bar-track"><div class="bar-fill" style="width:61%"></div></div><div class="bar-val">24,1%</div></div>
+            <div class="bar-row"><div class="bar-label">Calça Masc.</div><div class="bar-track"><div class="bar-fill" style="width:38%"></div></div><div class="bar-val">15,1%</div></div>
+            <div class="bar-row"><div class="bar-label">Bermuda Masc.</div><div class="bar-track"><div class="bar-fill" style="width:31%"></div></div><div class="bar-val">12,1%</div></div>
+            <div class="bar-row"><div class="bar-label">Saia</div><div class="bar-track"><div class="bar-fill" style="width:14%"></div></div><div class="bar-val">5,6%</div></div>
+            <div class="bar-row"><div class="bar-label">Top/Blusa/Colete</div><div class="bar-track"><div class="bar-fill" style="width:4%"></div></div><div class="bar-val">1,9%</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- INV 2025 -->
+      <div id="tipo-inv2025" class="tipo-panel" style="display:none">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px">
+          <div>
+            <div class="chart-title" style="font-size:15px;margin-bottom:16px">Por Tipo — Inv 2025 (82.046 pç)</div>
+            <div class="bar-row"><div class="bar-label">Feminino</div><div class="bar-track"><div class="bar-fill highlight" style="width:73%"></div></div><div class="bar-val">73,5%</div></div>
+            <div class="bar-row"><div class="bar-label">Masculino</div><div class="bar-track"><div class="bar-fill" style="width:22%"></div></div><div class="bar-val">22,0%</div></div>
+            <div class="bar-row"><div class="bar-label">Plus Size</div><div class="bar-track"><div class="bar-fill" style="width:5%;background:var(--accent)"></div></div><div class="bar-val">4,5%</div></div>
+            <div class="bar-row"><div class="bar-label">Country</div><div class="bar-track"><div class="bar-fill" style="width:1%;background:var(--muted)"></div></div><div class="bar-val">—</div></div>
+          </div>
+          <div>
+            <div class="chart-title" style="font-size:15px;margin-bottom:16px">Por Modelagem — Inv 2025</div>
+            <div class="bar-row"><div class="bar-label">Calça Fem.</div><div class="bar-track"><div class="bar-fill highlight" style="width:100%"></div></div><div class="bar-val">59,0%</div></div>
+            <div class="bar-row"><div class="bar-label">Calça Masc.</div><div class="bar-track"><div class="bar-fill" style="width:27%"></div></div><div class="bar-val">15,7%</div></div>
+            <div class="bar-row"><div class="bar-label">Shorts Fem.</div><div class="bar-track"><div class="bar-fill" style="width:14%"></div></div><div class="bar-val">8,4%</div></div>
+            <div class="bar-row"><div class="bar-label">Bermuda Masc.</div><div class="bar-track"><div class="bar-fill" style="width:10%"></div></div><div class="bar-val">5,6%</div></div>
+            <div class="bar-row"><div class="bar-label">Saia</div><div class="bar-track"><div class="bar-fill" style="width:6%"></div></div><div class="bar-val">3,7%</div></div>
+            <div class="bar-row"><div class="bar-label">Camisa</div><div class="bar-track"><div class="bar-fill" style="width:6%"></div></div><div class="bar-val">3,5%</div></div>
+            <div class="bar-row"><div class="bar-label">Jaqueta</div><div class="bar-track"><div class="bar-fill" style="width:5%"></div></div><div class="bar-val">3,1%</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VER 2026 -->
+      <div id="tipo-ver2026" class="tipo-panel" style="display:none">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px">
+          <div>
+            <div class="chart-title" style="font-size:15px;margin-bottom:16px">Por Tipo — Ver 2026 (122.339 pç)</div>
+            <div class="bar-row"><div class="bar-label">Feminino</div><div class="bar-track"><div class="bar-fill highlight" style="width:69%"></div></div><div class="bar-val">69,3%</div></div>
+            <div class="bar-row"><div class="bar-label">Masculino</div><div class="bar-track"><div class="bar-fill" style="width:23%"></div></div><div class="bar-val">22,7%</div></div>
+            <div class="bar-row"><div class="bar-label">Plus Size</div><div class="bar-track"><div class="bar-fill" style="width:5%;background:var(--accent)"></div></div><div class="bar-val">5,2%</div></div>
+            <div class="bar-row"><div class="bar-label">Country</div><div class="bar-track"><div class="bar-fill" style="width:3%;background:var(--muted)"></div></div><div class="bar-val">2,7%</div></div>
+          </div>
+          <div>
+            <div class="chart-title" style="font-size:15px;margin-bottom:16px">Por Modelagem — Ver 2026</div>
+            <div class="bar-row"><div class="bar-label">Calça Fem.</div><div class="bar-track"><div class="bar-fill highlight" style="width:100%"></div></div><div class="bar-val">49,5%</div></div>
+            <div class="bar-row"><div class="bar-label">Shorts Fem.</div><div class="bar-track"><div class="bar-fill" style="width:43%"></div></div><div class="bar-val">21,4%</div></div>
+            <div class="bar-row"><div class="bar-label">Calça Masc.</div><div class="bar-track"><div class="bar-fill" style="width:27%"></div></div><div class="bar-val">13,5%</div></div>
+            <div class="bar-row"><div class="bar-label">Bermuda Masc.</div><div class="bar-track"><div class="bar-fill" style="width:19%"></div></div><div class="bar-val">9,2%</div></div>
+            <div class="bar-row"><div class="bar-label">Saia</div><div class="bar-track"><div class="bar-fill" style="width:10%"></div></div><div class="bar-val">5,1%</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- INV 2026 -->
+      <div id="tipo-inv2026" class="tipo-panel" style="display:none">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px">
+          <div>
+            <div class="chart-title" style="font-size:15px;margin-bottom:16px">Por Tipo — Inv 2026 (101.812 pç)</div>
+            <div class="bar-row"><div class="bar-label">Feminino</div><div class="bar-track"><div class="bar-fill highlight" style="width:76%"></div></div><div class="bar-val">75,6%</div></div>
+            <div class="bar-row"><div class="bar-label">Masculino</div><div class="bar-track"><div class="bar-fill" style="width:19%"></div></div><div class="bar-val">18,6%</div></div>
+            <div class="bar-row"><div class="bar-label">Plus Size</div><div class="bar-track"><div class="bar-fill" style="width:3%;background:var(--accent)"></div></div><div class="bar-val">2,9%</div></div>
+            <div class="bar-row"><div class="bar-label">Country</div><div class="bar-track"><div class="bar-fill" style="width:3%;background:var(--muted)"></div></div><div class="bar-val">2,9%</div></div>
+          </div>
+          <div>
+            <div class="chart-title" style="font-size:15px;margin-bottom:16px">Por Modelagem — Inv 2026</div>
+            <div class="bar-row"><div class="bar-label">Calça Fem.</div><div class="bar-track"><div class="bar-fill highlight" style="width:100%"></div></div><div class="bar-val">62,1%</div></div>
+            <div class="bar-row"><div class="bar-label">Calça Masc.</div><div class="bar-track"><div class="bar-fill" style="width:24%"></div></div><div class="bar-val">14,8%</div></div>
+            <div class="bar-row"><div class="bar-label">Shorts Fem.</div><div class="bar-track"><div class="bar-fill" style="width:13%"></div></div><div class="bar-val">7,8%</div></div>
+            <div class="bar-row"><div class="bar-label">Saia</div><div class="bar-track"><div class="bar-fill" style="width:9%"></div></div><div class="bar-val">5,4%</div></div>
+            <div class="bar-row"><div class="bar-label">Jaqueta</div><div class="bar-track"><div class="bar-fill" style="width:7%"></div></div><div class="bar-val">4,5%</div></div>
+            <div class="bar-row"><div class="bar-label">Bermuda Masc.</div><div class="bar-track"><div class="bar-fill" style="width:6%"></div></div><div class="bar-val">3,6%</div></div>
+            <div class="bar-row"><div class="bar-label">Camisa</div><div class="bar-track"><div class="bar-fill" style="width:2%"></div></div><div class="bar-val">1,5%</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VER 2027 -->
+      <div id="tipo-ver2027" class="tipo-panel" style="display:none">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px">
+          <div>
+            <div class="chart-title" style="font-size:15px;margin-bottom:16px">Por Tipo — Ver 2027 (40.171 pç · parcial)</div>
+            <div class="bar-row"><div class="bar-label">Feminino</div><div class="bar-track"><div class="bar-fill highlight" style="width:80%"></div></div><div class="bar-val">80,5%</div></div>
+            <div class="bar-row"><div class="bar-label">Masculino</div><div class="bar-track"><div class="bar-fill" style="width:15%"></div></div><div class="bar-val">14,5%</div></div>
+            <div class="bar-row"><div class="bar-label">Plus Size</div><div class="bar-track"><div class="bar-fill" style="width:4%;background:var(--accent)"></div></div><div class="bar-val">3,5%</div></div>
+            <div class="bar-row"><div class="bar-label">Country</div><div class="bar-track"><div class="bar-fill" style="width:2%;background:var(--muted)"></div></div><div class="bar-val">1,5%</div></div>
+          </div>
+          <div>
+            <div class="chart-title" style="font-size:15px;margin-bottom:16px">Por Modelagem — Ver 2027</div>
+            <div class="bar-row"><div class="bar-label">Calça Fem.</div><div class="bar-track"><div class="bar-fill highlight" style="width:100%"></div></div><div class="bar-val">54,9%</div></div>
+            <div class="bar-row"><div class="bar-label">Shorts Fem.</div><div class="bar-track"><div class="bar-fill" style="width:37%"></div></div><div class="bar-val">20,2%</div></div>
+            <div class="bar-row"><div class="bar-label">Calça Masc.</div><div class="bar-track"><div class="bar-fill" style="width:17%"></div></div><div class="bar-val">9,2%</div></div>
+            <div class="bar-row"><div class="bar-label">Saia</div><div class="bar-track"><div class="bar-fill" style="width:11%"></div></div><div class="bar-val">6,2%</div></div>
+            <div class="bar-row"><div class="bar-label">Bermuda Masc.</div><div class="bar-track"><div class="bar-fill" style="width:10%"></div></div><div class="bar-val">5,6%</div></div>
+            <div class="bar-row"><div class="bar-label">Berm. Fem.</div><div class="bar-track"><div class="bar-fill" style="width:2%"></div></div><div class="bar-val">1,3%</div></div>
+            <div class="bar-row"><div class="bar-label">Blusa/Top</div><div class="bar-track"><div class="bar-fill" style="width:3%"></div></div><div class="bar-val">1,8%</div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TOP 20 PARETO -->
+  <section id="pareto">
+    <div class="section-label">Concentração de vendas</div>
+    <div class="section-title">Top 20 Referências por Coleção</div>
+
+    <div class="tab-nav" id="tab-nav-pareto">
+      <button class="tab-btn active" onclick="showParetoTab('pareto-inv2024', this)">Inv 2024</button>
+      <button class="tab-btn" onclick="showParetoTab('pareto-ver2025', this)">Ver 2025</button>
+      <button class="tab-btn" onclick="showParetoTab('pareto-inv2025', this)">Inv 2025</button>
+      <button class="tab-btn" onclick="showParetoTab('pareto-ver2026', this)">Ver 2026</button>
+      <button class="tab-btn" onclick="showParetoTab('pareto-inv2026', this)">Inv 2026</button>
+      <button class="tab-btn" onclick="showParetoTab('pareto-ver2027', this)">Ver 2027 ●</button>
+    </div>
+
+    <div class="table-wrap">
+
+      <table id="pareto-inv2024" class="pareto-table">
+        <thead><tr><th>#</th><th>Referência</th><th>Descrição</th><th style="text-align:right">Qtd</th><th style="text-align:right">% Col.</th><th style="text-align:right">% Acum.</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>CF21153</td><td>Calça Fem. Boot Cut</td><td style="text-align:right">2.452</td><td style="text-align:right">3,8%</td><td style="text-align:right">3,8%</td></tr>
+          <tr><td>2</td><td>CF21136</td><td>Calça Fem. Lipo</td><td style="text-align:right">1.858</td><td style="text-align:right">2,8%</td><td style="text-align:right">6,6%</td></tr>
+          <tr><td>3</td><td>CF21159</td><td>Calça Fem. Reta</td><td style="text-align:right">1.352</td><td style="text-align:right">2,1%</td><td style="text-align:right">8,7%</td></tr>
+          <tr><td>4</td><td>CF21151</td><td>Calça Fem. Little Boot</td><td style="text-align:right">1.352</td><td style="text-align:right">2,1%</td><td style="text-align:right">10,8%</td></tr>
+          <tr><td>5</td><td>CF21117</td><td>Calça Fem. Skinny</td><td style="text-align:right">1.158</td><td style="text-align:right">1,8%</td><td style="text-align:right">12,5%</td></tr>
+          <tr><td>6</td><td>CF21150</td><td>Calça Fem. Little Boot</td><td style="text-align:right">1.141</td><td style="text-align:right">1,7%</td><td style="text-align:right">14,3%</td></tr>
+          <tr><td>7</td><td>CM30509</td><td>Calça Masc. Skinny</td><td style="text-align:right">1.035</td><td style="text-align:right">1,6%</td><td style="text-align:right">15,9%</td></tr>
+          <tr><td>8</td><td>CF21132</td><td>Calça Fem. Skinny</td><td style="text-align:right">974</td><td style="text-align:right">1,5%</td><td style="text-align:right">17,3%</td></tr>
+          <tr><td>9</td><td>CF21126</td><td>Calça Fem. Skinny</td><td style="text-align:right">948</td><td style="text-align:right">1,5%</td><td style="text-align:right">18,8%</td></tr>
+          <tr><td>10</td><td>CF21119</td><td>Calça Fem. Cigarrete</td><td style="text-align:right">933</td><td style="text-align:right">1,4%</td><td style="text-align:right">20,2%</td></tr>
+          <tr><td>11</td><td>CF21135</td><td>Calça Fem. Lipo</td><td style="text-align:right">917</td><td style="text-align:right">1,4%</td><td style="text-align:right">21,6%</td></tr>
+          <tr><td>12</td><td>CF21138</td><td>Calça Fem. Lipo</td><td style="text-align:right">916</td><td style="text-align:right">1,4%</td><td style="text-align:right">23,0%</td></tr>
+          <tr><td>13</td><td>CM30518</td><td>Calça Masc. Slim</td><td style="text-align:right">850</td><td style="text-align:right">1,3%</td><td style="text-align:right">24,3%</td></tr>
+          <tr><td>14</td><td>CF21116</td><td>Calça Fem. Skinny</td><td style="text-align:right">841</td><td style="text-align:right">1,3%</td><td style="text-align:right">25,6%</td></tr>
+          <tr><td>15</td><td>CF21130</td><td>Calça Fem. Cigarrete</td><td style="text-align:right">821</td><td style="text-align:right">1,3%</td><td style="text-align:right">26,8%</td></tr>
+          <tr><td>16</td><td>CF21168</td><td>Calça Fem. Wide Cropped</td><td style="text-align:right">808</td><td style="text-align:right">1,2%</td><td style="text-align:right">28,1%</td></tr>
+          <tr><td>17</td><td>CM30517</td><td>Calça Masc. Skinny</td><td style="text-align:right">749</td><td style="text-align:right">1,1%</td><td style="text-align:right">29,2%</td></tr>
+          <tr><td>18</td><td>CF21167</td><td>Calça Fem. Wide Cropped</td><td style="text-align:right">749</td><td style="text-align:right">1,1%</td><td style="text-align:right">30,4%</td></tr>
+          <tr><td>19</td><td>CF21118</td><td>Calça Fem. Cigarrete</td><td style="text-align:right">716</td><td style="text-align:right">1,1%</td><td style="text-align:right">31,5%</td></tr>
+          <tr><td>20</td><td>CF21140</td><td>Calça Fem. Cintura Alta</td><td style="text-align:right">710</td><td style="text-align:right">1,1%</td><td style="text-align:right">32,6%</td></tr>
+          <tr style="background:var(--cream);font-weight:600"><td colspan="3">Top 20 = 32,6% da coleção (21.280 / 65.265 pç)</td><td colspan="3"></td></tr>
+        </tbody>
+      </table>
+
+      <table id="pareto-ver2025" class="pareto-table" style="display:none">
+        <thead><tr><th>#</th><th>Referência</th><th>Descrição</th><th style="text-align:right">Qtd</th><th style="text-align:right">% Col.</th><th style="text-align:right">% Acum.</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>CF21263</td><td>Calça Fem. Wide Cropped</td><td style="text-align:right">2.444</td><td style="text-align:right">2,0%</td><td style="text-align:right">2,0%</td></tr>
+          <tr><td>2</td><td>CF21252</td><td>Calça Fem. Little Boot</td><td style="text-align:right">2.379</td><td style="text-align:right">1,9%</td><td style="text-align:right">3,9%</td></tr>
+          <tr><td>3</td><td>CF21259</td><td>Calça Fem. Wide Leg</td><td style="text-align:right">1.990</td><td style="text-align:right">1,6%</td><td style="text-align:right">5,5%</td></tr>
+          <tr><td>4</td><td>CF21229</td><td>Calça Fem. Skinny Lipo</td><td style="text-align:right">1.875</td><td style="text-align:right">1,5%</td><td style="text-align:right">7,0%</td></tr>
+          <tr><td>5</td><td>S21274</td><td>Shorts Fem. Curto</td><td style="text-align:right">1.817</td><td style="text-align:right">1,5%</td><td style="text-align:right">8,5%</td></tr>
+          <tr><td>6</td><td>S21301</td><td>Shorts Fem. Meia Coxa</td><td style="text-align:right">1.802</td><td style="text-align:right">1,5%</td><td style="text-align:right">9,9%</td></tr>
+          <tr><td>7</td><td>S21287</td><td>Shorts Fem. Sport Fino Linho</td><td style="text-align:right">1.401</td><td style="text-align:right">1,1%</td><td style="text-align:right">11,1%</td></tr>
+          <tr><td>8</td><td>CF21264</td><td>Calça Fem. Wide Cropped</td><td style="text-align:right">1.345</td><td style="text-align:right">1,1%</td><td style="text-align:right">12,2%</td></tr>
+          <tr><td>9</td><td>CF21254</td><td>Calça Fem. Boot Cut</td><td style="text-align:right">1.320</td><td style="text-align:right">1,1%</td><td style="text-align:right">13,2%</td></tr>
+          <tr><td>10</td><td>CF21224</td><td>Calça Fem. Lipo</td><td style="text-align:right">1.297</td><td style="text-align:right">1,1%</td><td style="text-align:right">14,3%</td></tr>
+          <tr><td>11</td><td>CF21255</td><td>Calça Fem. Mom</td><td style="text-align:right">1.278</td><td style="text-align:right">1,0%</td><td style="text-align:right">15,3%</td></tr>
+          <tr><td>12</td><td>CF21247</td><td>Calça Fem. Cropped</td><td style="text-align:right">1.276</td><td style="text-align:right">1,0%</td><td style="text-align:right">16,4%</td></tr>
+          <tr><td>13</td><td>CF21266</td><td>Calça Fem. Pantalona</td><td style="text-align:right">1.256</td><td style="text-align:right">1,0%</td><td style="text-align:right">17,4%</td></tr>
+          <tr><td>14</td><td>CM30567</td><td>Calça Masc. Skinny</td><td style="text-align:right">1.247</td><td style="text-align:right">1,0%</td><td style="text-align:right">18,4%</td></tr>
+          <tr><td>15</td><td>S21271</td><td>Shorts Fem. Curto</td><td style="text-align:right">1.218</td><td style="text-align:right">1,0%</td><td style="text-align:right">19,4%</td></tr>
+          <tr><td>16</td><td>SA21312</td><td>Saia Fem. Midi</td><td style="text-align:right">1.168</td><td style="text-align:right">1,0%</td><td style="text-align:right">20,3%</td></tr>
+          <tr><td>17</td><td>CM30566</td><td>Calça Masc. Skinny</td><td style="text-align:right">1.112</td><td style="text-align:right">0,9%</td><td style="text-align:right">21,2%</td></tr>
+          <tr><td>18</td><td>S21292</td><td>Shorts Fem. Sport Fino</td><td style="text-align:right">1.104</td><td style="text-align:right">0,9%</td><td style="text-align:right">22,1%</td></tr>
+          <tr><td>19</td><td>CF21242</td><td>Calça Fem. Cigarrete</td><td style="text-align:right">1.104</td><td style="text-align:right">0,9%</td><td style="text-align:right">23,0%</td></tr>
+          <tr><td>20</td><td>B30600</td><td>Bermuda Masc. Tradicional</td><td style="text-align:right">1.102</td><td style="text-align:right">0,9%</td><td style="text-align:right">24,0%</td></tr>
+          <tr style="background:var(--cream);font-weight:600"><td colspan="3">Top 20 = 24,0% da coleção (29.535 / 122.829 pç)</td><td colspan="3"></td></tr>
+        </tbody>
+      </table>
+
+      <table id="pareto-inv2025" class="pareto-table" style="display:none">
+        <thead><tr><th>#</th><th>Referência</th><th>Descrição</th><th style="text-align:right">Qtd</th><th style="text-align:right">% Col.</th><th style="text-align:right">% Acum.</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>CF21542</td><td>Calça Fem. Mom</td><td style="text-align:right">1.954</td><td style="text-align:right">2,4%</td><td style="text-align:right">2,4%</td></tr>
+          <tr><td>2</td><td>CF21385</td><td>Calça Fem. Little Boot</td><td style="text-align:right">1.700</td><td style="text-align:right">2,1%</td><td style="text-align:right">4,4%</td></tr>
+          <tr><td>3</td><td>CF21377</td><td>Calça Fem. Skinny Legging</td><td style="text-align:right">1.468</td><td style="text-align:right">1,8%</td><td style="text-align:right">6,2%</td></tr>
+          <tr><td>4</td><td>CF21364</td><td>Calça Fem. Skinny Lipo</td><td style="text-align:right">1.301</td><td style="text-align:right">1,6%</td><td style="text-align:right">7,8%</td></tr>
+          <tr><td>5</td><td>CF21391</td><td>Calça Fem. Boot Cut</td><td style="text-align:right">1.238</td><td style="text-align:right">1,5%</td><td style="text-align:right">9,3%</td></tr>
+          <tr><td>6</td><td>CF21360</td><td>Calça Fem. Skinny Lipo</td><td style="text-align:right">1.232</td><td style="text-align:right">1,5%</td><td style="text-align:right">10,8%</td></tr>
+          <tr><td>7</td><td>CF21527</td><td>Calça Fem. Wide Leg</td><td style="text-align:right">1.150</td><td style="text-align:right">1,4%</td><td style="text-align:right">12,2%</td></tr>
+          <tr><td>8</td><td>CF21537</td><td>Calça Fem. Reta</td><td style="text-align:right">1.121</td><td style="text-align:right">1,4%</td><td style="text-align:right">13,6%</td></tr>
+          <tr><td>9</td><td>CF21531</td><td>Calça Fem. Wide Cropped</td><td style="text-align:right">1.108</td><td style="text-align:right">1,4%</td><td style="text-align:right">14,9%</td></tr>
+          <tr><td>10</td><td>CF21372</td><td>Calça Fem. Skinny</td><td style="text-align:right">1.060</td><td style="text-align:right">1,3%</td><td style="text-align:right">16,2%</td></tr>
+          <tr><td>11</td><td>CF21536</td><td>Calça Fem. Reta</td><td style="text-align:right">1.051</td><td style="text-align:right">1,3%</td><td style="text-align:right">17,5%</td></tr>
+          <tr><td>12</td><td>CF21369</td><td>Calça Fem. Cigarrete</td><td style="text-align:right">1.035</td><td style="text-align:right">1,3%</td><td style="text-align:right">18,8%</td></tr>
+          <tr><td>13</td><td>CF21544</td><td>Calça Fem. Mom</td><td style="text-align:right">1.018</td><td style="text-align:right">1,2%</td><td style="text-align:right">20,0%</td></tr>
+          <tr><td>14</td><td>CF21357</td><td>Calça Fem. Cigarrete</td><td style="text-align:right">1.014</td><td style="text-align:right">1,2%</td><td style="text-align:right">21,2%</td></tr>
+          <tr><td>15</td><td>CF21387</td><td>Calça Fem. Little Boot</td><td style="text-align:right">1.009</td><td style="text-align:right">1,2%</td><td style="text-align:right">22,5%</td></tr>
+          <tr><td>16</td><td>CF21371</td><td>Calça Fem. Cigarrete</td><td style="text-align:right">999</td><td style="text-align:right">1,2%</td><td style="text-align:right">23,7%</td></tr>
+          <tr><td>17</td><td>CF21366</td><td>Calça Fem. Cigarrete Lipo</td><td style="text-align:right">963</td><td style="text-align:right">1,2%</td><td style="text-align:right">24,8%</td></tr>
+          <tr><td>18</td><td>CF21386</td><td>Calça Fem. Little Boot</td><td style="text-align:right">915</td><td style="text-align:right">1,1%</td><td style="text-align:right">25,9%</td></tr>
+          <tr><td>19</td><td>CF21540</td><td>Calça Fem. Reta Cropped</td><td style="text-align:right">903</td><td style="text-align:right">1,1%</td><td style="text-align:right">27,0%</td></tr>
+          <tr><td>20</td><td>CM30640</td><td>Calça Masc. Skinny</td><td style="text-align:right">842</td><td style="text-align:right">1,0%</td><td style="text-align:right">28,1%</td></tr>
+          <tr style="background:var(--cream);font-weight:600"><td colspan="3">Top 20 = 28,1% da coleção (23.081 / 82.046 pç)</td><td colspan="3"></td></tr>
+        </tbody>
+      </table>
+
+      <table id="pareto-ver2026" class="pareto-table" style="display:none">
+        <thead><tr><th>#</th><th>Referência</th><th>Descrição</th><th style="text-align:right">Qtd</th><th style="text-align:right">% Col.</th><th style="text-align:right">% Acum.</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>CF21619</td><td>Calça Fem. Wide Leg</td><td style="text-align:right">3.164</td><td style="text-align:right">2,6%</td><td style="text-align:right">2,6%</td></tr>
+          <tr><td>2</td><td>CF21706</td><td>Calça Fem. Sport Fino</td><td style="text-align:right">3.062</td><td style="text-align:right">2,5%</td><td style="text-align:right">5,1%</td></tr>
+          <tr><td>3</td><td>CF21596</td><td>Calça Fem. Little Boot</td><td style="text-align:right">2.543</td><td style="text-align:right">2,1%</td><td style="text-align:right">7,1%</td></tr>
+          <tr><td>4</td><td>S21712</td><td>Shorts Fem. Sport Fino Meia Coxa</td><td style="text-align:right">2.297</td><td style="text-align:right">1,9%</td><td style="text-align:right">9,0%</td></tr>
+          <tr><td>5</td><td>S21648</td><td>Shorts Fem. Mom Meia Coxa</td><td style="text-align:right">1.945</td><td style="text-align:right">1,6%</td><td style="text-align:right">10,6%</td></tr>
+          <tr><td>6</td><td>S21647</td><td>Shorts Fem. Mom Meia Coxa</td><td style="text-align:right">1.920</td><td style="text-align:right">1,6%</td><td style="text-align:right">12,2%</td></tr>
+          <tr><td>7</td><td>CF21604</td><td>Calça Fem. Mom</td><td style="text-align:right">1.539</td><td style="text-align:right">1,3%</td><td style="text-align:right">13,4%</td></tr>
+          <tr><td>8</td><td>CF21574</td><td>Calça Fem. Skinny</td><td style="text-align:right">1.490</td><td style="text-align:right">1,2%</td><td style="text-align:right">14,6%</td></tr>
+          <tr><td>9</td><td>CF21559</td><td>Calça Fem. Skinny</td><td style="text-align:right">1.457</td><td style="text-align:right">1,2%</td><td style="text-align:right">15,8%</td></tr>
+          <tr><td>10</td><td>CF21618</td><td>Calça Fem. Wide Leg</td><td style="text-align:right">1.424</td><td style="text-align:right">1,2%</td><td style="text-align:right">17,0%</td></tr>
+          <tr><td>11</td><td>CF21607</td><td>Calça Fem. Reta</td><td style="text-align:right">1.360</td><td style="text-align:right">1,1%</td><td style="text-align:right">18,1%</td></tr>
+          <tr><td>12</td><td>CF21614</td><td>Calça Fem. Reta Cropped</td><td style="text-align:right">1.347</td><td style="text-align:right">1,1%</td><td style="text-align:right">19,2%</td></tr>
+          <tr><td>13</td><td>CF21621</td><td>Calça Fem. Wide Cropped</td><td style="text-align:right">1.311</td><td style="text-align:right">1,1%</td><td style="text-align:right">20,3%</td></tr>
+          <tr><td>14</td><td>S21630</td><td>Shorts Fem. Curto</td><td style="text-align:right">1.271</td><td style="text-align:right">1,0%</td><td style="text-align:right">21,3%</td></tr>
+          <tr><td>15</td><td>SA21657</td><td>Saia Fem. Mini</td><td style="text-align:right">1.234</td><td style="text-align:right">1,0%</td><td style="text-align:right">22,3%</td></tr>
+          <tr><td>16</td><td>CF21599</td><td>Calça Fem. Boot Cut</td><td style="text-align:right">1.231</td><td style="text-align:right">1,0%</td><td style="text-align:right">23,3%</td></tr>
+          <tr><td>17</td><td>CF21768</td><td>Calça Fem. Wide Leg Cargo</td><td style="text-align:right">1.230</td><td style="text-align:right">1,0%</td><td style="text-align:right">24,3%</td></tr>
+          <tr><td>18</td><td>S21654</td><td>Shorts Fem. Ciclista</td><td style="text-align:right">1.226</td><td style="text-align:right">1,0%</td><td style="text-align:right">25,3%</td></tr>
+          <tr><td>19</td><td>CM30722</td><td>Calça Masc. Skinny</td><td style="text-align:right">1.156</td><td style="text-align:right">0,9%</td><td style="text-align:right">26,3%</td></tr>
+          <tr><td>20</td><td>CF21595</td><td>Calça Fem. Little Boot</td><td style="text-align:right">1.153</td><td style="text-align:right">0,9%</td><td style="text-align:right">27,3%</td></tr>
+          <tr style="background:var(--cream);font-weight:600"><td colspan="3">Top 20 = 27,3% da coleção (33.360 / 122.339 pç)</td><td colspan="3"></td></tr>
+        </tbody>
+      </table>
+
+      <table id="pareto-inv2026" class="pareto-table" style="display:none">
+        <thead><tr><th>#</th><th>Referência</th><th>Descrição</th><th style="text-align:right">Qtd</th><th style="text-align:right">% Col.</th><th style="text-align:right">% Acum.</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>CF21799</td><td>Calça Fem. Skinny</td><td style="text-align:right">3.440</td><td style="text-align:right">3,4%</td><td style="text-align:right">3,4%</td></tr>
+          <tr><td>2</td><td>CM30807</td><td>Calça Masc. Slim</td><td style="text-align:right">2.805</td><td style="text-align:right">2,8%</td><td style="text-align:right">6,2%</td></tr>
+          <tr><td>3</td><td>CF21800</td><td>Calça Fem. Skinny</td><td style="text-align:right">1.997</td><td style="text-align:right">2,0%</td><td style="text-align:right">8,1%</td></tr>
+          <tr><td>4</td><td>CF21816</td><td>Calça Fem. Little Boot</td><td style="text-align:right">1.754</td><td style="text-align:right">1,7%</td><td style="text-align:right">9,8%</td></tr>
+          <tr><td>5</td><td>CF21863</td><td>Calça Fem. Wide Cropped</td><td style="text-align:right">1.499</td><td style="text-align:right">1,5%</td><td style="text-align:right">11,3%</td></tr>
+          <tr><td>6</td><td>CF21864</td><td>Calça Fem. Wide Cropped</td><td style="text-align:right">1.413</td><td style="text-align:right">1,4%</td><td style="text-align:right">12,7%</td></tr>
+          <tr><td>7</td><td>CF21865</td><td>Calça Fem. Wide Cropped</td><td style="text-align:right">1.379</td><td style="text-align:right">1,4%</td><td style="text-align:right">14,1%</td></tr>
+          <tr><td>8</td><td>CF21817</td><td>Calça Fem. Little Boot</td><td style="text-align:right">1.321</td><td style="text-align:right">1,3%</td><td style="text-align:right">15,4%</td></tr>
+          <tr><td>9</td><td>CF21819</td><td>Calça Fem. Little Boot</td><td style="text-align:right">1.261</td><td style="text-align:right">1,2%</td><td style="text-align:right">16,6%</td></tr>
+          <tr><td>10</td><td>CF21859</td><td>Calça Fem. Wide Leg Cargo</td><td style="text-align:right">1.250</td><td style="text-align:right">1,2%</td><td style="text-align:right">17,8%</td></tr>
+          <tr><td>11</td><td>CF21867</td><td>Calça Fem. Wide Cropped</td><td style="text-align:right">1.245</td><td style="text-align:right">1,2%</td><td style="text-align:right">19,1%</td></tr>
+          <tr><td>12</td><td>CF21851</td><td>Calça Fem. Wide Leg</td><td style="text-align:right">1.219</td><td style="text-align:right">1,2%</td><td style="text-align:right">20,3%</td></tr>
+          <tr><td>13</td><td>CF21797</td><td>Calça Fem. Skinny</td><td style="text-align:right">1.195</td><td style="text-align:right">1,2%</td><td style="text-align:right">21,5%</td></tr>
+          <tr><td>14</td><td>CF21854</td><td>Calça Fem. Wide Leg</td><td style="text-align:right">1.175</td><td style="text-align:right">1,2%</td><td style="text-align:right">22,6%</td></tr>
+          <tr><td>15</td><td>CF21822</td><td>Calça Fem. Boot Cut</td><td style="text-align:right">1.149</td><td style="text-align:right">1,1%</td><td style="text-align:right">23,8%</td></tr>
+          <tr><td>16</td><td>CF21828</td><td>Calça Fem. Mom</td><td style="text-align:right">1.141</td><td style="text-align:right">1,1%</td><td style="text-align:right">24,9%</td></tr>
+          <tr><td>17</td><td>CF21805</td><td>Calça Fem. Sport Fino</td><td style="text-align:right">1.139</td><td style="text-align:right">1,1%</td><td style="text-align:right">26,0%</td></tr>
+          <tr><td>18</td><td>CF21853</td><td>Calça Fem. Wide Leg</td><td style="text-align:right">1.108</td><td style="text-align:right">1,1%</td><td style="text-align:right">27,1%</td></tr>
+          <tr><td>19</td><td>CF21847</td><td>Calça Fem. Reta Cargo</td><td style="text-align:right">1.076</td><td style="text-align:right">1,1%</td><td style="text-align:right">28,1%</td></tr>
+          <tr><td>20</td><td>CF21835</td><td>Calça Fem. Reta</td><td style="text-align:right">1.070</td><td style="text-align:right">1,1%</td><td style="text-align:right">29,1%</td></tr>
+          <tr style="background:var(--cream);font-weight:600"><td colspan="3">Top 20 = 29,1% da coleção (29.636 / 101.812 pç)</td><td colspan="3"></td></tr>
+        </tbody>
+      </table>
+
+      <table id="pareto-ver2027" class="pareto-table" style="display:none">
+        <thead><tr><th>#</th><th>Referência</th><th>Descrição</th><th style="text-align:right">Qtd</th><th style="text-align:right">% Col.</th><th style="text-align:right">% Acum.</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>CF22158</td><td>Calça Fem. Wide Leg Cropped</td><td style="text-align:right">1.330</td><td style="text-align:right">3,3%</td><td style="text-align:right">3,3%</td></tr>
+          <tr><td>2</td><td>CF22152</td><td>Calça Fem. Wide Leg</td><td style="text-align:right">1.321</td><td style="text-align:right">3,3%</td><td style="text-align:right">6,6%</td></tr>
+          <tr><td>3</td><td>CF22092</td><td>Calça Fem. Skinny</td><td style="text-align:right">807</td><td style="text-align:right">2,0%</td><td style="text-align:right">8,6%</td></tr>
+          <tr><td>4</td><td>CF22155</td><td>Calça Fem. Wide Cropped Lipo</td><td style="text-align:right">674</td><td style="text-align:right">1,7%</td><td style="text-align:right">10,3%</td></tr>
+          <tr><td>5</td><td>CF22124</td><td>Calça Fem. Mom</td><td style="text-align:right">643</td><td style="text-align:right">1,6%</td><td style="text-align:right">11,9%</td></tr>
+          <tr><td>6</td><td>CF22107</td><td>Calça Fem. Little Boot</td><td style="text-align:right">543</td><td style="text-align:right">1,4%</td><td style="text-align:right">13,2%</td></tr>
+          <tr><td>7</td><td>CF22105</td><td>Calça Fem. Little Boot</td><td style="text-align:right">533</td><td style="text-align:right">1,3%</td><td style="text-align:right">14,5%</td></tr>
+          <tr><td>8</td><td>CF22086</td><td>Calça Fem. Cigarrete Lipo</td><td style="text-align:right">508</td><td style="text-align:right">1,3%</td><td style="text-align:right">15,8%</td></tr>
+          <tr><td>9</td><td>CM30891</td><td>Calça Masc. Slim</td><td style="text-align:right">457</td><td style="text-align:right">1,1%</td><td style="text-align:right">16,9%</td></tr>
+          <tr><td>10</td><td>S22062</td><td>Shorts Fem. Mom Meia Coxa</td><td style="text-align:right">450</td><td style="text-align:right">1,1%</td><td style="text-align:right">18,1%</td></tr>
+          <tr><td>11</td><td>CF22150</td><td>Calça Fem. Wide Leg</td><td style="text-align:right">441</td><td style="text-align:right">1,1%</td><td style="text-align:right">19,2%</td></tr>
+          <tr><td>12</td><td>CF22157</td><td>Calça Fem. Wide Cropped</td><td style="text-align:right">408</td><td style="text-align:right">1,0%</td><td style="text-align:right">20,2%</td></tr>
+          <tr><td>13</td><td>CF22142</td><td>Calça Fem. Reta Cropped Lipo</td><td style="text-align:right">408</td><td style="text-align:right">1,0%</td><td style="text-align:right">21,2%</td></tr>
+          <tr><td>14</td><td>S22059</td><td>Shorts Fem. Mom Meia Coxa</td><td style="text-align:right">405</td><td style="text-align:right">1,0%</td><td style="text-align:right">22,2%</td></tr>
+          <tr><td>15</td><td>CF22162</td><td>Calça Fem. Wide Leg</td><td style="text-align:right">397</td><td style="text-align:right">1,0%</td><td style="text-align:right">23,2%</td></tr>
+          <tr><td>16</td><td>S22044</td><td>Shorts Fem. Meia Coxa</td><td style="text-align:right">391</td><td style="text-align:right">1,0%</td><td style="text-align:right">24,2%</td></tr>
+          <tr><td>17</td><td>S22053</td><td>Shorts Fem. Meia Coxa</td><td style="text-align:right">383</td><td style="text-align:right">1,0%</td><td style="text-align:right">25,1%</td></tr>
+          <tr><td>18</td><td>S22039</td><td>Shorts Fem. Curto</td><td style="text-align:right">375</td><td style="text-align:right">0,9%</td><td style="text-align:right">26,1%</td></tr>
+          <tr><td>19</td><td>S22043</td><td>Shorts Fem. Curto</td><td style="text-align:right">373</td><td style="text-align:right">0,9%</td><td style="text-align:right">27,0%</td></tr>
+          <tr><td>20</td><td>CF22083</td><td>Calça Fem. Cigarrete</td><td style="text-align:right">369</td><td style="text-align:right">0,9%</td><td style="text-align:right">27,9%</td></tr>
+          <tr style="background:var(--cream);font-weight:600"><td colspan="3">Top 20 = 27,9% da coleção · dados parciais (11.216 / 40.171 pç)</td><td colspan="3"></td></tr>
+        </tbody>
+      </table>
+
+    </div>
+  </section>
+
+  <!-- CHECKLIST DE DADOS -->
+  <section id="checklist">
+    <div class="section-label">Levantamento de informações</div>
+    <div class="section-title">Dados Solicitados pela DDF — Status de Entrega</div>
+    <div class="checklist-grid">
+
+      <div class="checklist-group">
+        <h4>Dados Comerciais e de Vendas</h4>
+        <div class="check-item">
+          <div class="check-dot check-yes">✓</div>
+          <div class="check-text">Histórico de vendas por coleção (Inv.24 a Inv.26)</div>
+        </div>
+        <div class="check-item">
+          <div class="check-dot check-yes">✓</div>
+          <div class="check-text">Mapa de representantes: quantidade, regiões, tempo de casa</div>
+        </div>
+        <div class="check-item">
+          <div class="check-dot check-yes">✓</div>
+          <div class="check-text">Canal de venda: exclusivamente via representantes (multimarca)</div>
+        </div>
+        <div class="check-item">
+          <div class="check-dot check-partial">~</div>
+          <div class="check-text">Carteira de lojistas ativos — planilha a ser enviada</div>
+        </div>
+        <div class="check-item">
+          <div class="check-dot check-no">—</div>
+          <div class="check-text">Ticket médio por canal e frequência de recompra</div>
+        </div>
+        <div class="check-item">
+          <div class="check-dot check-no">✕</div>
+          <div class="check-text">Taxa de devoluções — dado não disponível internamente</div>
+        </div>
+      </div>
+
+      <div class="checklist-group">
+        <h4>Dados de Portfólio e Produto</h4>
+        <div class="check-item">
+          <div class="check-dot check-no">—</div>
+          <div class="check-text">Catálogos das últimas 2–3 coleções</div>
+        </div>
+        <div class="check-item">
+          <div class="check-dot check-no">—</div>
+          <div class="check-text">Tabelas de preço — custo, venda e margem</div>
+        </div>
+        <div class="check-item">
+          <div class="check-dot check-no">—</div>
+          <div class="check-text">Curva ABC de produtos (SKUs = 80% do faturamento)</div>
+        </div>
+        <div class="check-item">
+          <div class="check-dot check-no">—</div>
+          <div class="check-text">Frequência e calendário de lançamentos</div>
+        </div>
+      </div>
+
+      <div class="checklist-group">
+        <h4>Dados de Clientes e Público</h4>
+        <div class="check-item">
+          <div class="check-dot check-no">—</div>
+          <div class="check-text">Resultados de pesquisas anteriores (NPS, satisfação)</div>
+        </div>
+        <div class="check-item">
+          <div class="check-dot check-no">—</div>
+          <div class="check-text">Feedbacks recorrentes de SAC, reps e lojistas</div>
+        </div>
+      </div>
+
+      <div class="checklist-group">
+        <h4>Canal Multimarca</h4>
+        <div class="check-item">
+          <div class="check-dot check-yes">✓</div>
+          <div class="check-text">Canal único de venda confirmado: representantes multimarca</div>
+        </div>
+        <div class="check-item">
+          <div class="check-dot check-partial">~</div>
+          <div class="check-text">Quantidade de lojistas ativos no último ano — planilha a enviar</div>
+        </div>
+        <div class="check-item">
+          <div class="check-dot check-no">—</div>
+          <div class="check-text">Reclamações e solicitações recorrentes do canal</div>
+        </div>
+        <div class="check-item">
+          <div class="check-dot check-no">—</div>
+          <div class="check-text">Política comercial: prazo, desconto, frete, bonificação</div>
+        </div>
+      </div>
+
+      <div class="checklist-group">
+        <h4>Marca e Comunicação</h4>
+        <div class="check-item">
+          <div class="check-dot check-no">—</div>
+          <div class="check-text">Histórico de campanhas realizadas</div>
+        </div>
+        <div class="check-item">
+          <div class="check-dot check-no">—</div>
+          <div class="check-text">Redes sociais: perfil dos seguidores (lojista ou consumidor?)</div>
+        </div>
+        <div class="check-item">
+          <div class="check-dot check-no">—</div>
+          <div class="check-text">Posicionamento oficial: missão, visão, valores, tagline</div>
+        </div>
+        <div class="check-item">
+          <div class="check-dot check-no">—</div>
+          <div class="check-text">Materiais e ações de PDV</div>
+        </div>
+      </div>
+
+      <div class="checklist-group">
+        <h4>Concorrência e Mercado</h4>
+        <div class="check-item">
+          <div class="check-dot check-no">—</div>
+          <div class="check-text">Tabelas de preço públicas dos principais concorrentes</div>
+        </div>
+        <div class="check-item">
+          <div class="check-dot check-no">—</div>
+          <div class="check-text">Dados de mercado jeans no Brasil (ABIT, IEMI, Sebrae)</div>
+        </div>
+      </div>
+
+    </div>
+    <p style="font-size:11px;color:var(--muted);padding-top:8px">
+      ✓ Entregue &nbsp;·&nbsp; — Pendente de levantamento interno
+    </p>
+  </section>
+
+  <!-- CRONOGRAMA -->
+
+</main>
+
+<footer>
+  <div class="ft-left">RDG Jeans × DDF Consultoria</div>
+  <div class="ft-right">Uso interno · Diagnóstico de Marca 2026</div>
+</footer>
+
+<script>
+  function showParetoTab(id, btn) {
+    document.querySelectorAll('.pareto-table').forEach(t => t.style.display = 'none');
+    document.querySelectorAll('#tab-nav-pareto .tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).style.display = 'table';
+    btn.classList.add('active');
+  }
+
+  function showTipoTab(id, btn) {
+    document.querySelectorAll('.tipo-panel').forEach(t => t.style.display = 'none');
+    document.querySelectorAll('#tab-nav-tipo .tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).style.display = 'block';
+    btn.classList.add('active');
+  }
+
+  function showTab(id) {
+    document.querySelectorAll('.tab-table').forEach(t => t.style.display = 'none');
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('tab-' + id).style.display = 'table';
+    event.target.closest('.tab-btn').classList.add('active');
+  }
+
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+          this.classList.add('active');
+        }
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
